@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://s2622g54aw2m"]
+
+[ext_resource type="Texture2D" uid="uid://c0i145147vvap" path="res://assets/images/CERISIER.png" id="1_1n81i"]
+[ext_resource type="Texture2D" uid="uid://leu2i44htyqs" path="res://assets/images/CERISIERS.png" id="2_cqkrf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rghmn"]
+size = Vector2(1724, 258)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ikhq"]
+size = Vector2(1737, 236.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntbg6"]
+size = Vector2(128, 1072.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1e450"]
+size = Vector2(136, 387)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1n81i"]
+radius = 122.494896
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqkrf"]
+size = Vector2(69, 306)
+
+[node name="WOLAONARRIVEALECOLE" type="Node2D" unique_id=774880089]
+
+[node name="fond" type="Sprite2D" parent="." unique_id=897320018]
+position = Vector2(985, 536)
+texture = ExtResource("1_1n81i")
+
+[node name="Area2D" type="Area2D" parent="fond" unique_id=1433192664]
+position = Vector2(-2, -417)
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fond/Area2D" unique_id=1108684185]
+shape = SubResource("RectangleShape2D_rghmn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="fond/Area2D" unique_id=883980534]
+position = Vector2(3.5, 839.75)
+shape = SubResource("RectangleShape2D_6ikhq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="fond/Area2D" unique_id=422914106]
+position = Vector2(-923, 414.75)
+shape = SubResource("RectangleShape2D_ntbg6")
+
+[node name="h" type="CollisionShape2D" parent="fond/Area2D" unique_id=1248849615]
+position = Vector2(935, 71.5)
+shape = SubResource("RectangleShape2D_1e450")
+
+[node name="b" type="CollisionShape2D" parent="fond/Area2D" unique_id=484209769]
+position = Vector2(935, 762)
+shape = SubResource("RectangleShape2D_1e450")
+
+[node name="Vélos" type="CollisionShape2D" parent="fond/Area2D" unique_id=1594723945]
+position = Vector2(382, 132)
+shape = SubResource("CircleShape2D_1n81i")
+
+[node name="Couloir" type="Area2D" parent="fond" unique_id=759340593]
+collision_layer = 8
+collision_mask = 4
+
+[node name="SalleSuivante" type="CollisionShape2D" parent="fond/Couloir" unique_id=703182742]
+position = Vector2(970.5, 0)
+shape = SubResource("RectangleShape2D_cqkrf")
+debug_color = Color(0.99996454, 0, 0.11088101, 0.41960785)
+
+[node name="Arbres" type="Sprite2D" parent="." unique_id=222766284]
+position = Vector2(985, 536)
+texture = ExtResource("2_cqkrf")

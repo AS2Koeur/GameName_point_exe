@@ -2,12 +2,104 @@
 
 [ext_resource type="Script" uid="uid://cs3abh25ggdyp" path="res://scenes/scene_2_chambre_manager.gd" id="1_60nl4"]
 [ext_resource type="AudioStream" uid="uid://dc102ps0jnqe8" path="res://assets/audio/metal-pipe-clang.mp3" id="1_mslqa"]
+[ext_resource type="Texture2D" uid="uid://by2tal3oitbaw" path="res://assets/images/Chambr.png" id="2_pipv3"]
+[ext_resource type="Texture2D" uid="uid://bbtvqn45wwd7p" path="res://assets/images/Chambr1.png" id="3_8vr4i"]
 [ext_resource type="PackedScene" uid="uid://bj541456lkyw7" path="res://scenes/prefabs/TextBoxScene.tscn" id="3_41tui"]
+[ext_resource type="Texture2D" uid="uid://cscbo5p74tax4" path="res://assets/images/Chambr2.png" id="4_tnrnj"]
+[ext_resource type="Texture2D" uid="uid://bgams5vthywy3" path="res://assets/images/Chambr3.png" id="5_xpsuc"]
+[ext_resource type="Texture2D" uid="uid://c8vp8y13hy2yh" path="res://assets/images/Chambr4.png" id="6_3bycp"]
+[ext_resource type="Texture2D" uid="uid://ksref3khvhk1" path="res://assets/images/reveil.png" id="8_8vr4i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_quncx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pipv3")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8vr4i")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tnrnj")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_xpsuc")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_3bycp")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_tnrnj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.59843755, 0.29609376)]
+}
+
+[sub_resource type="Animation" id="Animation_xpsuc"]
+resource_name = "reveil"
+length = 0.76666665
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.100000024, 0.23333335, 0.36666656, 0.4666667, 0.6333332),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.59843755, 0.29609376), Vector2(0.26875, 0.5414063), Vector2(0.59843755, 0.29609376), Vector2(0.26875, 0.5414063), Vector2(0.59843755, 0.29609376), Vector2(0.26875, 0.5414063)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3bycp"]
+_data = {
+&"RESET": SubResource("Animation_tnrnj"),
+&"reveil": SubResource("Animation_xpsuc")
+}
 
 [node name="Scene2Managment" type="Control" unique_id=935195028]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_60nl4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1135575206]
+position = Vector2(960, 544)
+sprite_frames = SubResource("SpriteFrames_quncx")
+animation = &"2"
 
 [node name="BegininTimer" type="Timer" parent="." unique_id=450922771]
 wait_time = 2.0
@@ -19,6 +111,15 @@ wait_time = 3.0
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1480360682]
 stream = ExtResource("1_mslqa")
 volume_db = 24.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1101094603]
+root_node = NodePath("../reveil")
+libraries/ = SubResource("AnimationLibrary_3bycp")
+
+[node name="reveil" type="Sprite2D" parent="." unique_id=880690962]
+position = Vector2(139.99998, 666.25)
+scale = Vector2(0.59843755, 0.29609376)
+texture = ExtResource("8_8vr4i")
 
 [node name="textBox" parent="." unique_id=1163237783 instance=ExtResource("3_41tui")]
 visible = false

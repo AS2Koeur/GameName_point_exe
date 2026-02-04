@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dscj6g3ecohg"]
+
+[ext_resource type="Texture2D" uid="uid://bixlm5xvjqpbn" path="res://assets/images/SALLE2CLASSE.png" id="1_lnnbf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qvt1"]
+size = Vector2(206, 474.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vjlyi"]
+size = Vector2(206, 290.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnnbf"]
+size = Vector2(841.75, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdyie"]
+size = Vector2(122, 1018.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5bre"]
+size = Vector2(1734.5, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8s5db"]
+size = Vector2(448, 69)
+
+[node name="CLASSE" type="Node2D" unique_id=2100337974]
+
+[node name="Fond" type="Sprite2D" parent="." unique_id=1737775017]
+position = Vector2(990, 540)
+texture = ExtResource("1_lnnbf")
+
+[node name="Bureau" type="Area2D" parent="." unique_id=681138357]
+position = Vector2(990, 540)
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bureau" unique_id=1672588316]
+position = Vector2(-299, 83.75)
+shape = SubResource("RectangleShape2D_4qvt1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Bureau" unique_id=447126241]
+position = Vector2(-583, 85)
+shape = SubResource("RectangleShape2D_4qvt1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Bureau" unique_id=1003384563]
+position = Vector2(298, 155.75)
+shape = SubResource("RectangleShape2D_vjlyi")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Bureau" unique_id=1963882674]
+position = Vector2(581, 156)
+shape = SubResource("RectangleShape2D_vjlyi")
+
+[node name="Fond2" type="Area2D" parent="." unique_id=1864301031]
+position = Vector2(1571, 696)
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fond2" unique_id=899509195]
+position = Vector2(-6.75, 352)
+shape = SubResource("RectangleShape2D_lnnbf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fond2" unique_id=61878482]
+position = Vector2(-1149.875, 355)
+shape = SubResource("RectangleShape2D_lnnbf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Fond2" unique_id=328789991]
+position = Vector2(347, -188.5)
+shape = SubResource("RectangleShape2D_kdyie")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Fond2" unique_id=1935284648]
+position = Vector2(-1510, -186.25)
+shape = SubResource("RectangleShape2D_kdyie")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Fond2" unique_id=1808427651]
+position = Vector2(-580.25, -662)
+shape = SubResource("RectangleShape2D_c5bre")
+
+[node name="Couloir" type="Area2D" parent="." unique_id=1455458683]
+position = Vector2(1571, 696)
+
+[node name="SalleSuivante" type="CollisionShape2D" parent="Couloir" unique_id=2085706707]
+position = Vector2(-596, 366.5)
+shape = SubResource("RectangleShape2D_8s5db")
+debug_color = Color(0.99433297, 0, 0.2310231, 0.41960785)
