@@ -1,3 +1,2 @@
-res://scenes/BlackMenuScene1.tscn
-res://scripts/ButtonManagerScene1.gd
 res://scenes/Scene2Chambre.tscn
+res://scenes/scene_2_chambre_manager.gd
