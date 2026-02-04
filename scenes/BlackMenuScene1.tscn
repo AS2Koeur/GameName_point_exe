@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dkyk2cy6xh17b" path="res://scripts/DialogueBasique.gd" id="2_103rn"]
 [ext_resource type="Script" uid="uid://cjqjuneh6ab3m" path="res://scripts/ButtonManagerScene1.gd" id="2_njdwn"]
 
-[node name="Main" type="Control" unique_id=859591191]
+[node name="Main2" type="Control" unique_id=859591191]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1925.0

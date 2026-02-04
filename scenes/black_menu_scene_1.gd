@@ -7,6 +7,7 @@ func _ready() -> void:
 	if Dialogic.current_timeline != null:
 		return
 	await get_tree().create_timer(2.0)
+	print("startDialogue")
 	Dialogic.start("res://dialogTimeline/timeline.dtl")
 	get_viewport().set_input_as_handled()
 

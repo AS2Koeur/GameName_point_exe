@@ -1,3 +1,4 @@
+Button
 AnimationPlayer
 Sprite2D
 PanelContainer
@@ -5,11 +6,9 @@ Timer
 Control
 AudioStreamPlayer2D
 HBoxContainer
-Button
 ColorRect
 MarginContainer
 Label
 NinePatchRect
 TextEdit
 Node2D
-BoxContainer
