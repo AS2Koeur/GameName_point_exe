@@ -98,7 +98,7 @@ script = ExtResource("1_60nl4")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1135575206]
 position = Vector2(960, 544)
 sprite_frames = SubResource("SpriteFrames_quncx")
-animation = &"1"
+animation = &"2"
 
 [node name="BegininTimer" type="Timer" parent="." unique_id=450922771]
 wait_time = 2.0
