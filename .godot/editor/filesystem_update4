@@ -1,3 +1,5 @@
 res://scenes/scene_2_chambre_manager.gd
 res://scenes/wolaonarrivealecole.tscn
 res://scenes/classe.tscn
+res://scenes/MainMenu.tscn
+res://scenes/Scene2Chambre.tscn

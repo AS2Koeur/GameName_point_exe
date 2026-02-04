@@ -2,13 +2,66 @@
 
 [ext_resource type="Script" uid="uid://cs3abh25ggdyp" path="res://scenes/scene_2_chambre_manager.gd" id="1_60nl4"]
 [ext_resource type="AudioStream" uid="uid://dc102ps0jnqe8" path="res://assets/audio/metal-pipe-clang.mp3" id="1_mslqa"]
+[ext_resource type="Texture2D" uid="uid://by2tal3oitbaw" path="res://assets/images/Chambr.png" id="2_pipv3"]
+[ext_resource type="Texture2D" uid="uid://bbtvqn45wwd7p" path="res://assets/images/Chambr1.png" id="3_8vr4i"]
 [ext_resource type="PackedScene" uid="uid://bj541456lkyw7" path="res://scenes/prefabs/TextBoxScene.tscn" id="3_41tui"]
+[ext_resource type="Texture2D" uid="uid://cscbo5p74tax4" path="res://assets/images/Chambr2.png" id="4_tnrnj"]
+[ext_resource type="Texture2D" uid="uid://bgams5vthywy3" path="res://assets/images/Chambr3.png" id="5_xpsuc"]
+[ext_resource type="Texture2D" uid="uid://c8vp8y13hy2yh" path="res://assets/images/Chambr4.png" id="6_3bycp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_quncx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pipv3")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8vr4i")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tnrnj")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_xpsuc")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_3bycp")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}]
 
 [node name="Scene2Managment" type="Control" unique_id=935195028]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_60nl4")
 dialogue = Array[String](["slkmvhqebj", "d;fvhjkf", "q;kfhjvioe"])
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1135575206]
+position = Vector2(960, 544)
+sprite_frames = SubResource("SpriteFrames_quncx")
+animation = &"1"
 
 [node name="BegininTimer" type="Timer" parent="." unique_id=450922771]
 wait_time = 2.0
