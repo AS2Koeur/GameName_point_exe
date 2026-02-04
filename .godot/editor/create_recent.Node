@@ -1,3 +1,5 @@
+AnimationPlayer
+Sprite2D
 PanelContainer
 Timer
 Control
@@ -7,7 +9,6 @@ Button
 ColorRect
 MarginContainer
 Label
-Sprite2D
 NinePatchRect
 TextEdit
 Node2D
