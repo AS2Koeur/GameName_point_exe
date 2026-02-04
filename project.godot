@@ -47,6 +47,7 @@ go_dialog={
 2d_physics/layer_1="Fond"
 2d_physics/layer_2="Assets"
 2d_physics/layer_3="Joueur"
+2d_physics/layer_4="Detect"
 
 [physics]
 
