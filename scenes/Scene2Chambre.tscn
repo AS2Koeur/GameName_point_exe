@@ -54,7 +54,6 @@ animations = [{
 }]
 
 [sub_resource type="Animation" id="Animation_tnrnj"]
-length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -99,7 +98,7 @@ script = ExtResource("1_60nl4")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1135575206]
 position = Vector2(960, 544)
 sprite_frames = SubResource("SpriteFrames_quncx")
-animation = &"2"
+animation = &"1"
 
 [node name="BegininTimer" type="Timer" parent="." unique_id=450922771]
 wait_time = 2.0
@@ -117,9 +116,18 @@ root_node = NodePath("../reveil")
 libraries/ = SubResource("AnimationLibrary_3bycp")
 
 [node name="reveil" type="Sprite2D" parent="." unique_id=880690962]
-position = Vector2(139.99998, 666.25)
+position = Vector2(261.75, 570)
 scale = Vector2(0.59843755, 0.29609376)
 texture = ExtResource("8_8vr4i")
+
+[node name="skip" type="Button" parent="." unique_id=2107446448]
+layout_mode = 1
+offset_left = 1566.0001
+offset_top = 1006.00006
+offset_right = 1708.0001
+offset_bottom = 1037.0
+scale = Vector2(2.5, 2.5)
+text = "Skip Le narrateur"
 
 [node name="textBox" parent="." unique_id=1163237783 instance=ExtResource("3_41tui")]
 visible = false
@@ -132,5 +140,6 @@ text = "Tu préfères quoi des chaussettes lama ou chat ? "
 
 [connection signal="timeout" from="BegininTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="dialogTimer" to="." method="_on_dialog_timer_timeout"]
+[connection signal="pressed" from="skip" to="." method="_on_skip_pressed"]
 
 [editable path="textBox"]

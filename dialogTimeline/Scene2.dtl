@@ -2,7 +2,6 @@ join Me center
 Me: PUTAIIIIN IL EST 7H30, JE SUIS GRAVE EN RETARD
 Me: *s’habille
 join Narrateur center
-label Début
 Narrateur: Tu préfères quoi des chaussettes lama ou chat ?
 Narrateur: Personnellement j’aime pas trop les chaussettes à motif, à la limite pourquoi pas des chaussettes avec des petits chiens mais pour moi le pire c’est les chaussettes dépareillées.
 Narrateur: C’est vraiment pas très beau, c’est même ignoble. Qui sont les guignols qui portent ça, je sais pas moi, portez des chaussettes blanches avec des claquettes ou portez pas de chaussettes.
@@ -14,4 +13,9 @@ Narrateur: Bah moi non.
 Narrateur: Allez s’il te plait,
 Narrateur: Quitte le jeu
 Narrateur: Attend encore quelques jours et tu pourra y jouer
-jump Début
+Narrateur:  **Et puis ça finit pas quoi**
+label blahb
+Narrateur: Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+Narrateur: Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+Narrateur: Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+jump blahb
