@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://coaatsfpad2c8"]
+
+[ext_resource type="Texture2D" uid="uid://dvr8g6t3ykstv" path="res://assets/images/Toilettes.png" id="1_pifo0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7icvy"]
+size = Vector2(1983, 549)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8igk"]
+size = Vector2(124, 525)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2y7ex"]
+size = Vector2(1242, 288)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqo44"]
+size = Vector2(188, 223)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4yjam"]
+size = Vector2(296, 209)
+
+[node name="TOILETTEs" type="Node2D" unique_id=1773976060]
+
+[node name="Fond" type="Sprite2D" parent="." unique_id=1630656096]
+position = Vector2(988, 541)
+texture = ExtResource("1_pifo0")
+
+[node name="Collision" type="Area2D" parent="." unique_id=2121825266]
+position = Vector2(988, 541)
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision" unique_id=1657039214]
+position = Vector2(0.5, 264.5)
+shape = SubResource("RectangleShape2D_7icvy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collision" unique_id=1014653097]
+position = Vector2(-926, -273.5)
+shape = SubResource("RectangleShape2D_a8igk")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Collision" unique_id=1666325064]
+position = Vector2(931, -275)
+shape = SubResource("RectangleShape2D_a8igk")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Collision" unique_id=599828757]
+position = Vector2(-240, -388)
+shape = SubResource("RectangleShape2D_2y7ex")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Collision" unique_id=1027345018]
+position = Vector2(774, -427.5)
+shape = SubResource("RectangleShape2D_tqo44")
+
+[node name="COULOIR" type="Area2D" parent="." unique_id=1005439800]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="COULOIR" unique_id=2128529024]
+position = Vector2(1522, 98.5)
+shape = SubResource("RectangleShape2D_4yjam")
+debug_color = Color(0.98523265, 0, 0.34040052, 0.41960785)
