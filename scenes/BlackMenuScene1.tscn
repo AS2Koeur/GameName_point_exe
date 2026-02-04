@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c6xf70epj2jwv"]
 
 [ext_resource type="PackedScene" uid="uid://bj541456lkyw7" path="res://scenes/prefabs/TextBoxScene.tscn" id="1_n53ua"]
+[ext_resource type="Script" uid="uid://d3lea6gm1vqba" path="res://scenes/black_menu_scene_1.gd" id="1_nuvbr"]
 [ext_resource type="Script" uid="uid://dkyk2cy6xh17b" path="res://scripts/DialogueBasique.gd" id="2_103rn"]
 [ext_resource type="Script" uid="uid://cjqjuneh6ab3m" path="res://scripts/ButtonManagerScene1.gd" id="2_njdwn"]
 
@@ -9,6 +10,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1925.0
 offset_bottom = 1077.0
+script = ExtResource("1_nuvbr")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=969719086]
 layout_mode = 1
@@ -20,6 +22,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="textBox" parent="." unique_id=1163237783 instance=ExtResource("1_n53ua")]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.601

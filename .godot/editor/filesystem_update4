@@ -1,2 +1,11 @@
+res://dialogTimeline/timeline.dtl
 res://scenes/Scene2Chambre.tscn
+res://dialogTimeline/character.dch
+res://dialogTimeline/Narrateur.dch
+res://dialogTimeline/Me.dch
+res://dialogTimeline/Kawaine Girl.dch
 res://scenes/scene_2_chambre_manager.gd
+res://scenes/BlackMenuScene1.tscn
+res://scenes/black_menu_scene_1.gd
+res://scripts/DialogueBasique.gd
+res://dialogTimeline/Scene2.dtl

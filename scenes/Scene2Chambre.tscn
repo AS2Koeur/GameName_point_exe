@@ -8,7 +8,6 @@
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_60nl4")
-dialogue = Array[String](["slkmvhqebj", "d;fvhjkf", "q;kfhjvioe"])
 
 [node name="BegininTimer" type="Timer" parent="." unique_id=450922771]
 wait_time = 2.0
@@ -22,6 +21,7 @@ stream = ExtResource("1_mslqa")
 volume_db = 24.0
 
 [node name="textBox" parent="." unique_id=1163237783 instance=ExtResource("3_41tui")]
+visible = false
 layout_mode = 0
 offset_top = 681.0
 offset_bottom = 1072.0
