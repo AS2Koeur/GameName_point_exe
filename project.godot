@@ -42,6 +42,12 @@ go_dialog={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Fond"
+2d_physics/layer_2="Assets"
+2d_physics/layer_3="Joueur"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://s2622g54aw2m"]
+
+[ext_resource type="Texture2D" uid="uid://c0i145147vvap" path="res://assets/images/CERISIER.png" id="1_1n81i"]
+[ext_resource type="Texture2D" uid="uid://leu2i44htyqs" path="res://assets/images/CERISIERS.png" id="2_cqkrf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rghmn"]
+size = Vector2(1724, 258)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ikhq"]
+size = Vector2(1737, 236.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntbg6"]
+size = Vector2(128, 1072.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1e450"]
+size = Vector2(136, 387)
+
+[node name="WOLAONARRIVEALECOLE" type="Node2D" unique_id=774880089]
+
+[node name="fond" type="Sprite2D" parent="." unique_id=897320018]
+position = Vector2(985, 536)
+texture = ExtResource("1_1n81i")
+
+[node name="Haut" type="Area2D" parent="fond" unique_id=1433192664]
+position = Vector2(-2, -417)
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fond/Haut" unique_id=1108684185]
+shape = SubResource("RectangleShape2D_rghmn")
+
+[node name="Bas" type="Area2D" parent="fond" unique_id=363895317]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fond/Bas" unique_id=883980534]
+position = Vector2(1.5, 422.75)
+shape = SubResource("RectangleShape2D_6ikhq")
+
+[node name="Gauche" type="Area2D" parent="fond" unique_id=658829461]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fond/Gauche" unique_id=422914106]
+position = Vector2(-925, -2.25)
+shape = SubResource("RectangleShape2D_ntbg6")
+
+[node name="Droite" type="Area2D" parent="fond" unique_id=1159282793]
+collision_layer = 2
+collision_mask = 4
+
+[node name="h" type="CollisionShape2D" parent="fond/Droite" unique_id=1248849615]
+position = Vector2(933, -345.5)
+shape = SubResource("RectangleShape2D_1e450")
+
+[node name="b" type="CollisionShape2D" parent="fond/Droite" unique_id=484209769]
+position = Vector2(933, 345)
+shape = SubResource("RectangleShape2D_1e450")
+
+[node name="Arbres" type="Sprite2D" parent="fond" unique_id=222766284]
+texture = ExtResource("2_cqkrf")
