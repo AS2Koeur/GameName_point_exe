@@ -67,7 +67,7 @@ audio/channel_defaults={
 }
 }
 layout/style_list=[]
-layout/default_style="Default"
+layout/default_style=""
 text/input_action="dialogic_default_action"
 text/autoadvance_enabled=true
 text/autoadvance_fixed_delay=0.5
