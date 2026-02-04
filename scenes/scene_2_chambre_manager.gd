@@ -9,7 +9,10 @@ var DialogueIndex = 0
 func _ready() -> void:
 	await get_tree().create_timer(5.0).timeout
 	$BegininTimer.start()
+
 	print("Release me")
+	print("Release me")
+	print("gay'nt")
 func _on_timer_timeout() -> void:
 	$AudioStreamPlayer2D.play()
 	await get_tree().create_timer(2.0).timeout
