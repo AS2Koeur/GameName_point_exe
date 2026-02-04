@@ -12,7 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_letter_display_timer_timeout() -> void:
-	label.text = "Mais tu veux vraiment jouer à ce jeu ? \n Il est vraiment pas fini, y’a des bugs, le code est pas totalement fini. \n T’es vraiment sûr ? "
-	await get_tree().create_timer(3.0).timeout
-	$"../Panneau boutons".visible = true
-	print("PITIE MARCHE")
+	pass
+	#label.text = "Mais tu veux vraiment jouer à ce jeu ? \n Il est vraiment pas fini, y’a des bugs, le code est pas totalement fini. \n T’es vraiment sûr ? "
+	#await get_tree().create_timer(3.0).timeout
+	#$"../Panneau boutons".visible = true
+	#print("PITIE MARCHE")

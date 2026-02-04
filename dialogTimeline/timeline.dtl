@@ -1,0 +1,10 @@
+join Narrateur center
+Narrateur: Ah salut, je suis vraiment désolée mais le jeu est vraiment pas fini, on a eu quelques problèmes avec l’équipe
+Narrateur: Mais tu veux vraiment jouer à ce jeu ? Il est vraiment pas fini, y’a des bugs, le code est pas totalement fini, t’es vraiment sûr ?
+- Oui | [=""]
+	Narrateur: Bon ok, mais c’est vraiment pas abouti, prend ça comme une démo.
+	[wait time="1.0"]
+	[signal arg="Oui"]
+- Non
+	Narrateur: Non? En vrai t'as raison, à plus !
+	[signal arg="Non"]
