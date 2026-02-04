@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bt75indvgkin4"]
+
+[ext_resource type="Script" uid="uid://cg7n3t72cyr78" path="res://scripts/main_menu_controller.gd" id="1_0ykhv"]
+[ext_resource type="Script" uid="uid://du6bjgornu1dy" path="res://scripts/MenuPlay.gd" id="1_yqorp"]
+[ext_resource type="Script" uid="uid://b5acm6w62nmdm" path="res://scripts/options.gd" id="3_2wh52"]
+[ext_resource type="Script" uid="uid://ctwm37y4st8ad" path="res://scripts/quit.gd" id="4_ow34m"]
+
+[node name="Main" type="PanelContainer" unique_id=1112340394]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.625
+anchor_right = 0.5
+anchor_bottom = 0.625
+offset_left = -250.0
+offset_top = -259.0
+offset_right = 250.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ykhv")
+
+[node name="Container" type="VBoxContainer" parent="." unique_id=1594071476]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="play" type="Button" parent="Container" unique_id=883680617]
+custom_minimum_size = Vector2(500, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Play"
+script = ExtResource("1_yqorp")
+
+[node name="options" type="Button" parent="Container" unique_id=1214325258]
+custom_minimum_size = Vector2(500, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Options"
+script = ExtResource("3_2wh52")
+
+[node name="quit" type="Button" parent="Container" unique_id=1915950173]
+custom_minimum_size = Vector2(500, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Quit"
+script = ExtResource("4_ow34m")
+
+[node name="Timer" type="Timer" parent="Container/quit" unique_id=1904986607]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="pressed" from="Container/play" to="Container/play" method="_on_pressed"]
+[connection signal="pressed" from="Container/options" to="Container/options" method="_on_pressed"]
+[connection signal="pressed" from="Container/quit" to="Container/quit" method="_on_pressed"]
+[connection signal="timeout" from="Container/quit/Timer" to="Container/quit" method="_on_timer_timeout"]

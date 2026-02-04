@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://blmnukl2neuqf"]
+
+[ext_resource type="Script" uid="uid://cs3abh25ggdyp" path="res://scenes/scene_2_chambre_manager.gd" id="1_60nl4"]
+[ext_resource type="AudioStream" uid="uid://dc102ps0jnqe8" path="res://assets/audio/metal-pipe-clang.mp3" id="1_mslqa"]
+[ext_resource type="PackedScene" uid="uid://bj541456lkyw7" path="res://scenes/prefabs/TextBoxScene.tscn" id="3_41tui"]
+
+[node name="Scene2Managment" type="Control" unique_id=935195028]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_60nl4")
+dialogue = Array[String](["slkmvhqebj", "d;fvhjkf", "q;kfhjvioe"])
+
+[node name="BegininTimer" type="Timer" parent="." unique_id=450922771]
+wait_time = 2.0
+one_shot = true
+
+[node name="dialogTimer" type="Timer" parent="." unique_id=455342987]
+wait_time = 3.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1480360682]
+stream = ExtResource("1_mslqa")
+volume_db = 24.0
+
+[node name="textBox" parent="." unique_id=1163237783 instance=ExtResource("3_41tui")]
+layout_mode = 0
+offset_top = 681.0
+offset_bottom = 1072.0
+
+[node name="Label" parent="textBox/MarginContainer" parent_id_path=PackedInt32Array(1163237783, 968024286) index="0" unique_id=1070881893]
+text = "Tu préfères quoi des chaussettes lama ou chat ? "
+
+[connection signal="timeout" from="BegininTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="dialogTimer" to="." method="_on_dialog_timer_timeout"]
+
+[editable path="textBox"]
