@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://du6bjgornu1dy" path="res://scripts/MenuPlay.gd" id="1_yqorp"]
 [ext_resource type="Texture2D" uid="uid://dh7r6h742ynrv" path="res://assets/images/AAcceuil.png" id="2_826wr"]
 [ext_resource type="Script" uid="uid://b5acm6w62nmdm" path="res://scripts/options.gd" id="3_2wh52"]
-[ext_resource type="Texture2D" uid="uid://c7sehjwa70py4" path="res://assets/images/Bouton.png" id="3_ucygd"]
 [ext_resource type="Script" uid="uid://ctwm37y4st8ad" path="res://scripts/quit.gd" id="4_ow34m"]
 
 [node name="Main" type="PanelContainer" unique_id=1112340394]
@@ -36,7 +35,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Play"
-icon = ExtResource("3_ucygd")
 script = ExtResource("1_yqorp")
 
 [node name="options" type="Button" parent="Container" unique_id=1214325258]
@@ -45,7 +43,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Options"
-icon = ExtResource("3_ucygd")
 script = ExtResource("3_2wh52")
 
 [node name="quit" type="Button" parent="Container" unique_id=1915950173]
@@ -54,7 +51,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Quit"
-icon = ExtResource("3_ucygd")
 script = ExtResource("4_ow34m")
 
 [node name="Timer" type="Timer" parent="Container/quit" unique_id=1904986607]
