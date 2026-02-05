@@ -24,18 +24,22 @@ func _on_sortie_interdite_body_entered(body: CharacterBody2D) -> void:
 	if Dialogic.current_timeline != null:
 		return
 	Dialogic.start("res://dialogTimeline/Scene4TryExit.dtl")
+	
 
 
 func _on_sortie_droite_body_entered(body: CharacterBody2D) -> void:
 	get_tree().change_scene_to_file("res://scenes/toilett_es.tscn")
+	Dialogic.end_timeline(true)
 
 
 func _on_sortie_haut_salle_info_body_entered(body: CharacterBody2D) -> void:
 	get_tree().change_scene_to_file("res://scenes/classe.tscn")
+	Dialogic.end_timeline(true)
 
 
 func _on_sortie_bas_droite_classe_body_entered(body: CharacterBody2D) -> void:
 	get_tree().change_scene_to_file("res://scenes/SalleInfo.tscn")
+	Dialogic.end_timeline(true)
 	
 
 
