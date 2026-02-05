@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dll7c668hlctv" path="res://scripts/salle_info.gd" id="1_nvsg4"]
 [ext_resource type="Texture2D" uid="uid://b6uj0tr26lliw" path="res://assets/images/Ordinateurs.png" id="2_nvsg4"]
 [ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="4_s81mj"]
+[ext_resource type="Texture2D" uid="uid://c3n5xuxtiok0s" path="res://assets/images/KawaiineGirlSprite1.png" id="5_mg6jo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s81mj"]
 size = Vector2(1977.5, 63)
@@ -24,7 +25,7 @@ size = Vector2(1040, 160)
 size = Vector2(316, 180)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvsg4"]
-size = Vector2(220, 346.125)
+size = Vector2(220, 245)
 
 [node name="SalleInfo" type="Node2D" unique_id=1127456890]
 script = ExtResource("1_nvsg4")
@@ -76,6 +77,8 @@ position = Vector2(470, 319)
 [node name="Interaction" type="Node2D" parent="." unique_id=1401641324]
 
 [node name="Sortie" type="Area2D" parent="Interaction" unique_id=1535078685]
+collision_layer = 8
+collision_mask = 4
 
 [node name="COULOIR" type="CollisionShape2D" parent="Interaction/Sortie" unique_id=1824961967]
 position = Vector2(453, 80)
@@ -83,31 +86,50 @@ shape = SubResource("RectangleShape2D_lq8ju")
 debug_color = Color(0.9919885, 0, 0.26442012, 0.41960785)
 
 [node name="1ePC" type="Area2D" parent="Interaction" unique_id=996434328]
+collision_layer = 8
+collision_mask = 4
 
 [node name="1ePC" type="CollisionShape2D" parent="Interaction/1ePC" unique_id=647566963]
-position = Vector2(1179, 250)
+position = Vector2(1182, 287)
 shape = SubResource("RectangleShape2D_nvsg4")
 debug_color = Color(0.98928875, 0, 0.29760626, 0.41960785)
 
 [node name="2e PC" type="Area2D" parent="Interaction" unique_id=1616440370]
+collision_layer = 8
+collision_mask = 4
 
 [node name="2ePC" type="CollisionShape2D" parent="Interaction/2e PC" unique_id=845572992]
-position = Vector2(1706, 260)
+position = Vector2(1709, 291)
 shape = SubResource("RectangleShape2D_nvsg4")
 debug_color = Color(0.98928875, 0, 0.29760626, 0.41960785)
 
 [node name="3ePC" type="Area2D" parent="Interaction" unique_id=706879986]
+position = Vector2(0, 11)
+collision_layer = 8
+collision_mask = 4
 
 [node name="3ePC" type="CollisionShape2D" parent="Interaction/3ePC" unique_id=1198242667]
-position = Vector2(283, 684.9375)
+position = Vector2(283, 735.5)
 shape = SubResource("RectangleShape2D_nvsg4")
 debug_color = Color(0.98928875, 0, 0.29760626, 0.41960785)
 
 [node name="4ePC" type="Area2D" parent="Interaction" unique_id=398051277]
+collision_layer = 8
+collision_mask = 4
 
 [node name="4ePC" type="CollisionShape2D" parent="Interaction/4ePC" unique_id=1756278743]
-position = Vector2(551, 686.875)
+position = Vector2(552, 751)
 shape = SubResource("RectangleShape2D_nvsg4")
 debug_color = Color(0.98928875, 0, 0.29760626, 0.41960785)
 
+[node name="ScreenDiscord" type="Sprite2D" parent="." unique_id=1128439866]
+visible = false
+position = Vector2(979, 503)
+scale = Vector2(3, 3)
+texture = ExtResource("5_mg6jo")
+
 [connection signal="body_entered" from="Interaction/Sortie" to="." method="_on_sortie_body_entered"]
+[connection signal="body_entered" from="Interaction/1ePC" to="." method="_on_first_pc_body_entered"]
+[connection signal="body_entered" from="Interaction/2e PC" to="." method="_on_second_pc_body_entered"]
+[connection signal="body_entered" from="Interaction/3ePC" to="." method="_on_third_pc_body_entered"]
+[connection signal="body_entered" from="Interaction/4ePC" to="." method="_on_fourth_pc_body_entered"]

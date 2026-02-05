@@ -1,23 +1,23 @@
 join "Kawaine Girl" center
 "Kawaine Girl": HIHIHIHIHIHIHIHIHIHIHIHI
 [clear time="1.0"]
-[wait time="2.0"]
+[wait time="1.0"]
 Me: Zut … Je ne sais plus sur quel PC est le dossier de mon PFE…
 [end_timeline]
 label interaction PC1
 join Narrateur center
 Narrateur: C'est pas ton PC chef
-[clear time="1.0"]
+[end_timeline]
 label interaction PC2
-[clear time="1.0"]
 Narrateur: Arrête de toucher à tout !
-[clear time="1.0"]
+[end_timeline]
 label interaction PC3
+Me: * Récupère son... PFE ? *
 Narrateur: Bon, Sors de cette pièce, visiblement t'as rien foutu pour ton PFE...
-[clear time="1.0"]
+[end_timeline]
 label interaction LEPC
 Narrateur: Qu'est ce que t'as trouvé encore?
-[clear time="1.0"]
+[end_timeline]
 label CrashOut
 Narrateur: PUTAIN !
 Narrateur: T’en as pas marre de fouiller partout ???
