@@ -21,13 +21,20 @@ grow_vertical = 2
 script = ExtResource("1_0ykhv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=816360222]
-position = Vector2(241, 235)
+position = Vector2(375.5, 208)
 texture = ExtResource("2_826wr")
 
 [node name="Container" type="VBoxContainer" parent="." unique_id=1594071476]
 layout_mode = 2
 theme_override_constants/separation = 15
 alignment = 1
+
+[node name="Label" type="Label" parent="Container" unique_id=729622177]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 100
+text = "GameName.exe"
 
 [node name="play" type="Button" parent="Container" unique_id=883680617]
 custom_minimum_size = Vector2(500, 80)
