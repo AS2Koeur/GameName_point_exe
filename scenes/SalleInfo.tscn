@@ -27,7 +27,7 @@ size = Vector2(316, 180)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvsg4"]
 size = Vector2(220, 346.125)
 
-[node name="Node2D" type="Node2D" unique_id=1127456890]
+[node name="SalleInfo" type="Node2D" unique_id=1127456890]
 script = ExtResource("1_nvsg4")
 
 [node name="Fond" type="Sprite2D" parent="." unique_id=1648046290]
