@@ -1,0 +1,244 @@
+[gd_scene format=3 uid="uid://cdv7atfv4jfj6"]
+
+[ext_resource type="Script" uid="uid://c41l1xo5mma3w" path="res://scripts/scene_4_hall_Manager.gd" id="1_em3vf"]
+[ext_resource type="Texture2D" uid="uid://oagfyoltbdek" path="res://assets/images/Hall.png" id="1_jpgks"]
+[ext_resource type="Texture2D" uid="uid://cebwy5jta10fk" path="res://assets/images/CasiersBleusHall.png" id="2_3dnbn"]
+[ext_resource type="Texture2D" uid="uid://b5oql8bgow63e" path="res://assets/images/CasierRoseHall.png" id="3_aerdd"]
+[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="4_24osr"]
+[ext_resource type="Script" uid="uid://bwdu7to7cjh2c" path="res://scenes/joueur.gd" id="5_igv3a"]
+[ext_resource type="Texture2D" uid="uid://elpt4ds2v31q" path="res://icon.svg" id="5_lmvvv"]
+[ext_resource type="Script" uid="uid://cscf7uirsc72i" path="res://scenes/senpai.gd" id="6_myebn"]
+[ext_resource type="Texture2D" uid="uid://c3n5xuxtiok0s" path="res://assets/images/KawaiineGirlSprite1.png" id="7_lmvvv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdquh"]
+size = Vector2(166, 335)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_igv3a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87avd"]
+size = Vector2(1.0058478, 1.0086956)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpgks"]
+size = Vector2(128, 493.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dnbn"]
+size = Vector2(712, 168)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aerdd"]
+size = Vector2(117.5, 382.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_em3vf"]
+size = Vector2(175.5, 62.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24osr"]
+size = Vector2(776, 67.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myebn"]
+size = Vector2(39, 198.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ijr1"]
+size = Vector2(317, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igv3a"]
+size = Vector2(1187, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmvvv"]
+size = Vector2(1194.5, 214.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dl5rs"]
+size = Vector2(57, 195)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8f2r1"]
+size = Vector2(303.5, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_objlb"]
+size = Vector2(301.5, 38)
+
+[node name="GameManager" type="Node2D" unique_id=1782168892]
+script = ExtResource("1_em3vf")
+
+[node name="Hall" type="Sprite2D" parent="." unique_id=360938961]
+position = Vector2(985, 536)
+texture = ExtResource("1_jpgks")
+metadata/_edit_lock_ = true
+
+[node name="CasiersBleus" type="Sprite2D" parent="." unique_id=982555074]
+position = Vector2(986, 255)
+scale = Vector2(1, 0.7925926)
+texture = ExtResource("2_3dnbn")
+metadata/_edit_lock_ = true
+
+[node name="CasiersBleusBas" type="Sprite2D" parent="." unique_id=1366559822]
+position = Vector2(989, 540)
+texture = ExtResource("2_3dnbn")
+metadata/_edit_lock_ = true
+
+[node name="CasierRose" type="Sprite2D" parent="." unique_id=1693369195]
+visible = false
+position = Vector2(469, 695)
+texture = ExtResource("3_aerdd")
+
+[node name="Area2D" type="Area2D" parent="CasierRose" unique_id=1252774181]
+position = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CasierRose/Area2D" unique_id=1119436161]
+position = Vector2(-3, 10)
+shape = SubResource("RectangleShape2D_tdquh")
+
+[node name="Feuille" type="Sprite2D" parent="." unique_id=538777951]
+visible = false
+position = Vector2(317, 756)
+scale = Vector2(85.49999, 57.5)
+texture = SubResource("CanvasTexture_igv3a")
+
+[node name="FeuilleArea" type="Area2D" parent="Feuille" unique_id=1371762949]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Feuille/FeuilleArea" unique_id=751375012]
+scale = Vector2(1, 1.0000004)
+shape = SubResource("RectangleShape2D_87avd")
+disabled = true
+
+[node name="Feuille2" type="Sprite2D" parent="." unique_id=325735958]
+visible = false
+position = Vector2(609, 927.99994)
+scale = Vector2(-38.05928, 37.2568)
+texture = SubResource("CanvasTexture_igv3a")
+
+[node name="Feuille3" type="Sprite2D" parent="." unique_id=720096114]
+visible = false
+position = Vector2(374, 897)
+scale = Vector2(-62.65928, 37.2568)
+texture = SubResource("CanvasTexture_igv3a")
+
+[node name="Senpai" type="Sprite2D" parent="." unique_id=1289541376]
+position = Vector2(1743, 245)
+texture = ExtResource("5_lmvvv")
+script = ExtResource("6_myebn")
+
+[node name="CharacterBody2D" parent="." unique_id=2054218985 instance=ExtResource("4_24osr")]
+position = Vector2(180, 569)
+script = ExtResource("5_igv3a")
+
+[node name="KawaineGirl" type="Sprite2D" parent="." unique_id=822805488]
+visible = false
+position = Vector2(1749, 917)
+scale = Vector2(0.28279594, 0.281063)
+texture = ExtResource("7_lmvvv")
+
+[node name="CollisionMurs" type="StaticBody2D" parent="." unique_id=2112483891]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionMurs" unique_id=1922204877]
+position = Vector2(57, 241.75)
+shape = SubResource("RectangleShape2D_jpgks")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CollisionMurs" unique_id=429827170]
+position = Vector2(1914, 243)
+shape = SubResource("RectangleShape2D_jpgks")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CollisionMurs" unique_id=980180069]
+position = Vector2(479, 80)
+shape = SubResource("RectangleShape2D_3dnbn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CollisionMurs" unique_id=618343914]
+position = Vector2(1498, 78)
+shape = SubResource("RectangleShape2D_3dnbn")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="CollisionMurs" unique_id=327106535]
+position = Vector2(57.25, 879.75)
+shape = SubResource("RectangleShape2D_aerdd")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="CollisionMurs" unique_id=1180295830]
+position = Vector2(1913, 877)
+shape = SubResource("RectangleShape2D_aerdd")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="CollisionMurs" unique_id=1851743758]
+position = Vector2(206.25, 1041.25)
+shape = SubResource("RectangleShape2D_em3vf")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="CollisionMurs" unique_id=1541054281]
+position = Vector2(1762, 1041)
+shape = SubResource("RectangleShape2D_em3vf")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="CollisionMurs" unique_id=1078637845]
+position = Vector2(986, 1043.75)
+shape = SubResource("RectangleShape2D_24osr")
+
+[node name="SortieGauche" type="CollisionShape2D" parent="CollisionMurs" unique_id=2138289565]
+position = Vector2(9.5, 586.75)
+shape = SubResource("RectangleShape2D_myebn")
+
+[node name="sortieDroite" type="CollisionShape2D" parent="CollisionMurs" unique_id=1185718090]
+position = Vector2(1968, 587)
+shape = SubResource("RectangleShape2D_myebn")
+
+[node name="SortieHaut" type="CollisionShape2D" parent="CollisionMurs" unique_id=1565320217]
+position = Vector2(991, 19.5)
+shape = SubResource("RectangleShape2D_0ijr1")
+
+[node name="SortieBasG" type="CollisionShape2D" parent="CollisionMurs" unique_id=1253372462]
+position = Vector2(447, 1075)
+shape = SubResource("RectangleShape2D_0ijr1")
+
+[node name="SortieBasD" type="CollisionShape2D" parent="CollisionMurs" unique_id=1729474302]
+position = Vector2(1528, 1074)
+shape = SubResource("RectangleShape2D_0ijr1")
+
+[node name="CollisionCasiers" type="StaticBody2D" parent="." unique_id=2010604178]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionCasiers" unique_id=814973832]
+position = Vector2(987.5, 421)
+shape = SubResource("RectangleShape2D_igv3a")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CollisionCasiers" unique_id=1563147696]
+position = Vector2(984.75, 750.25)
+shape = SubResource("RectangleShape2D_lmvvv")
+
+[node name="sorties" type="Node2D" parent="." unique_id=1644006845]
+
+[node name="SortieInterdite" type="Area2D" parent="sorties" unique_id=1041076007]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorties/SortieInterdite" unique_id=1263145746]
+position = Vector2(41, 583.5)
+shape = SubResource("RectangleShape2D_dl5rs")
+debug_color = Color(1, 0, 0.101960786, 0.41960785)
+
+[node name="SortieDroite" type="Area2D" parent="sorties" unique_id=1823592924]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorties/SortieDroite" unique_id=1045077917]
+position = Vector2(1908, 589)
+shape = SubResource("RectangleShape2D_dl5rs")
+debug_color = Color(1, 0, 0.101960786, 0.41960785)
+
+[node name="SortieHautSalleInfo" type="Area2D" parent="sorties" unique_id=1220174756]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorties/SortieHautSalleInfo" unique_id=940554089]
+position = Vector2(988, 93)
+shape = SubResource("RectangleShape2D_8f2r1")
+debug_color = Color(0.44233283, 0.45376074, 1, 0.41960785)
+
+[node name="SortieBasDroiteClasse" type="Area2D" parent="sorties" unique_id=545621091]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorties/SortieBasDroiteClasse" unique_id=116672943]
+position = Vector2(1524.25, 1030)
+shape = SubResource("RectangleShape2D_objlb")
+debug_color = Color(0.88046443, 0.33875912, 5.7756904e-07, 0.41960785)
+
+[node name="SortieBasGauche" type="Area2D" parent="sorties" unique_id=732738312]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorties/SortieBasGauche" unique_id=1089531311]
+position = Vector2(446, 1033)
+shape = SubResource("RectangleShape2D_objlb")
+debug_color = Color(0.88046443, 0.33875912, 5.7756904e-07, 0.41960785)
+
+[connection signal="input_event" from="CasierRose/Area2D" to="." method="_on_area_Casier_input_event"]
+[connection signal="body_entered" from="Feuille/FeuilleArea" to="." method="_on_feuille_area_body_entered"]
+[connection signal="body_entered" from="sorties/SortieInterdite" to="." method="_on_sortie_interdite_body_entered"]
+[connection signal="body_entered" from="sorties/SortieDroite" to="." method="_on_sortie_droite_body_entered"]
+[connection signal="body_entered" from="sorties/SortieHautSalleInfo" to="." method="_on_sortie_haut_salle_info_body_entered"]
+[connection signal="body_entered" from="sorties/SortieBasDroiteClasse" to="." method="_on_sortie_bas_droite_classe_body_entered"]
+[connection signal="body_entered" from="sorties/SortieBasGauche" to="." method="_on_sortie_bas_gauche_body_entered"]
+
+[editable path="CharacterBody2D"]

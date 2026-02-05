@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dscj6g3ecohg"]
 
+[ext_resource type="Script" uid="uid://c6ojil0hx5um0" path="res://scripts/classe.gd" id="1_4qvt1"]
 [ext_resource type="Texture2D" uid="uid://bixlm5xvjqpbn" path="res://assets/images/SALLE2CLASSE.png" id="1_lnnbf"]
+[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="3_vjlyi"]
+[ext_resource type="Script" uid="uid://bwdu7to7cjh2c" path="res://scenes/joueur.gd" id="4_kdyie"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qvt1"]
 size = Vector2(206, 474.5)
@@ -21,12 +24,17 @@ size = Vector2(1734.5, 62)
 size = Vector2(448, 69)
 
 [node name="CLASSE" type="Node2D" unique_id=2100337974]
+script = ExtResource("1_4qvt1")
 
 [node name="Fond" type="Sprite2D" parent="." unique_id=1737775017]
 position = Vector2(990, 540)
 texture = ExtResource("1_lnnbf")
 
-[node name="Bureau" type="Area2D" parent="." unique_id=681138357]
+[node name="CharacterBody2D" parent="." unique_id=2054218985 instance=ExtResource("3_vjlyi")]
+position = Vector2(972, 662.00006)
+script = ExtResource("4_kdyie")
+
+[node name="Bureau" type="StaticBody2D" parent="." unique_id=320003027]
 position = Vector2(990, 540)
 collision_layer = 2
 collision_mask = 4
@@ -47,7 +55,7 @@ shape = SubResource("RectangleShape2D_vjlyi")
 position = Vector2(581, 156)
 shape = SubResource("RectangleShape2D_vjlyi")
 
-[node name="Fond2" type="Area2D" parent="." unique_id=1864301031]
+[node name="Fond2" type="StaticBody2D" parent="." unique_id=303255244]
 position = Vector2(1571, 696)
 collision_layer = 2
 collision_mask = 4
@@ -72,10 +80,12 @@ shape = SubResource("RectangleShape2D_kdyie")
 position = Vector2(-580.25, -662)
 shape = SubResource("RectangleShape2D_c5bre")
 
-[node name="Couloir" type="Area2D" parent="." unique_id=1455458683]
+[node name="Couloir" type="Area2D" parent="." unique_id=319910289]
 position = Vector2(1571, 696)
 
 [node name="SalleSuivante" type="CollisionShape2D" parent="Couloir" unique_id=2085706707]
 position = Vector2(-596, 366.5)
 shape = SubResource("RectangleShape2D_8s5db")
 debug_color = Color(0.99433297, 0, 0.2310231, 0.41960785)
+
+[connection signal="body_entered" from="Couloir" to="." method="_on_couloir_body_entered"]

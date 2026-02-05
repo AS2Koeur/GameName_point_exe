@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beax1lgcbaecu"
-valid=false
+uid="uid://oagfyoltbdek"
+path="res://.godot/imported/Hall.png-687f2b909f40f36d5eba7d80833cb47a.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/images/reveil.jpg"
+source_file="res://assets/images/Hall.png"
+dest_files=["res://.godot/imported/Hall.png-687f2b909f40f36d5eba7d80833cb47a.ctex"]
 
 [params]
 

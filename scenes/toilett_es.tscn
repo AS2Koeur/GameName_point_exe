@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://coaatsfpad2c8"]
+[gd_scene format=3 uid="uid://d1nlhg3mmgei7"]
 
+[ext_resource type="Script" uid="uid://cqv7efn22qyx" path="res://scripts/toilett_es.gd" id="1_2y7ex"]
 [ext_resource type="Texture2D" uid="uid://dvr8g6t3ykstv" path="res://assets/images/Toilettes.png" id="1_pifo0"]
+[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="2_a8igk"]
+[ext_resource type="Script" uid="uid://bwdu7to7cjh2c" path="res://scenes/joueur.gd" id="3_2y7ex"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7icvy"]
 size = Vector2(1983, 549)
@@ -18,12 +21,21 @@ size = Vector2(188, 223)
 size = Vector2(296, 209)
 
 [node name="TOILETTEs" type="Node2D" unique_id=1773976060]
+script = ExtResource("1_2y7ex")
 
 [node name="Fond" type="Sprite2D" parent="." unique_id=1630656096]
 position = Vector2(988, 541)
 texture = ExtResource("1_pifo0")
 
-[node name="Collision" type="Area2D" parent="." unique_id=2121825266]
+[node name="CharacterBody2D" parent="." unique_id=2054218985 instance=ExtResource("2_a8igk")]
+position = Vector2(1542, 334)
+script = ExtResource("3_2y7ex")
+
+[node name="CollisionShape2D" parent="CharacterBody2D" index="0" unique_id=2139292562]
+light_mask = 31
+visibility_layer = 31
+
+[node name="Collision" type="StaticBody2D" parent="." unique_id=942792440]
 position = Vector2(988, 541)
 collision_layer = 2
 collision_mask = 4
@@ -49,10 +61,12 @@ position = Vector2(774, -427.5)
 shape = SubResource("RectangleShape2D_tqo44")
 
 [node name="COULOIR" type="Area2D" parent="." unique_id=1005439800]
-collision_layer = 8
-collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="COULOIR" unique_id=2128529024]
 position = Vector2(1522, 98.5)
 shape = SubResource("RectangleShape2D_4yjam")
 debug_color = Color(0.98523265, 0, 0.34040052, 0.41960785)
+
+[connection signal="body_entered" from="COULOIR" to="." method="_on_couloir_body_entered"]
+
+[editable path="CharacterBody2D"]

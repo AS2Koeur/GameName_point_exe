@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://s2622g54aw2m"]
 
 [ext_resource type="Texture2D" uid="uid://c0i145147vvap" path="res://assets/images/CERISIER.png" id="1_1n81i"]
+[ext_resource type="Script" uid="uid://crjdcjtpity1k" path="res://scripts/wolaonarrivealecole.gd" id="1_6ikhq"]
 [ext_resource type="Texture2D" uid="uid://leu2i44htyqs" path="res://assets/images/CERISIERS.png" id="2_cqkrf"]
+[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="3_rghmn"]
+[ext_resource type="Script" uid="uid://bwdu7to7cjh2c" path="res://scenes/joueur.gd" id="4_6ikhq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rghmn"]
 size = Vector2(1724, 258)
@@ -21,49 +24,76 @@ radius = 122.494896
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqkrf"]
 size = Vector2(69, 306)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wu6pm"]
+size = Vector2(133, 582.5)
+
 [node name="WOLAONARRIVEALECOLE" type="Node2D" unique_id=774880089]
+script = ExtResource("1_6ikhq")
 
 [node name="fond" type="Sprite2D" parent="." unique_id=897320018]
 position = Vector2(985, 536)
 texture = ExtResource("1_1n81i")
 
-[node name="Area2D" type="Area2D" parent="fond" unique_id=1433192664]
-position = Vector2(-2, -417)
-collision_layer = 2
-collision_mask = 4
+[node name="CharacterBody2D" parent="." unique_id=2054218985 instance=ExtResource("3_rghmn")]
+light_mask = 14
+visibility_layer = 12
+position = Vector2(480, 540)
+script = ExtResource("4_6ikhq")
+SPEED = 1000.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fond/Area2D" unique_id=1108684185]
-shape = SubResource("RectangleShape2D_rghmn")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="fond/Area2D" unique_id=883980534]
-position = Vector2(3.5, 839.75)
-shape = SubResource("RectangleShape2D_6ikhq")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="fond/Area2D" unique_id=422914106]
-position = Vector2(-923, 414.75)
-shape = SubResource("RectangleShape2D_ntbg6")
-
-[node name="h" type="CollisionShape2D" parent="fond/Area2D" unique_id=1248849615]
-position = Vector2(935, 71.5)
-shape = SubResource("RectangleShape2D_1e450")
-
-[node name="b" type="CollisionShape2D" parent="fond/Area2D" unique_id=484209769]
-position = Vector2(935, 762)
-shape = SubResource("RectangleShape2D_1e450")
-
-[node name="Vélos" type="CollisionShape2D" parent="fond/Area2D" unique_id=1594723945]
-position = Vector2(382, 132)
-shape = SubResource("CircleShape2D_1n81i")
-
-[node name="Couloir" type="Area2D" parent="fond" unique_id=759340593]
-collision_layer = 8
-collision_mask = 4
-
-[node name="SalleSuivante" type="CollisionShape2D" parent="fond/Couloir" unique_id=703182742]
-position = Vector2(970.5, 0)
-shape = SubResource("RectangleShape2D_cqkrf")
-debug_color = Color(0.99996454, 0, 0.11088101, 0.41960785)
+[node name="CollisionShape2D" parent="CharacterBody2D" index="0" unique_id=2139292562]
+light_mask = 26
 
 [node name="Arbres" type="Sprite2D" parent="." unique_id=222766284]
 position = Vector2(985, 536)
 texture = ExtResource("2_cqkrf")
+
+[node name="collisions" type="StaticBody2D" parent="." unique_id=41913684]
+position = Vector2(983, 119)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions" unique_id=1108684185]
+shape = SubResource("RectangleShape2D_rghmn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="collisions" unique_id=883980534]
+position = Vector2(3.5, 839.75)
+shape = SubResource("RectangleShape2D_6ikhq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="collisions" unique_id=422914106]
+position = Vector2(-923, 414.75)
+shape = SubResource("RectangleShape2D_ntbg6")
+
+[node name="h" type="CollisionShape2D" parent="collisions" unique_id=1248849615]
+position = Vector2(935, 71.5)
+shape = SubResource("RectangleShape2D_1e450")
+
+[node name="b" type="CollisionShape2D" parent="collisions" unique_id=484209769]
+position = Vector2(935, 762)
+shape = SubResource("RectangleShape2D_1e450")
+
+[node name="Vélos" type="CollisionShape2D" parent="collisions" unique_id=1594723945]
+position = Vector2(382, 132)
+shape = SubResource("CircleShape2D_1n81i")
+
+[node name="SceneExit" type="Area2D" parent="." unique_id=759340593]
+position = Vector2(985, 536)
+collision_layer = 9
+collision_mask = 5
+
+[node name="SalleSuivante" type="CollisionShape2D" parent="SceneExit" unique_id=703182742]
+light_mask = 8
+visibility_layer = 8
+position = Vector2(970.5, 0)
+shape = SubResource("RectangleShape2D_cqkrf")
+debug_color = Color(0.99996454, 0, 0.11088101, 0.41960785)
+
+[node name="droite" type="Area2D" parent="." unique_id=114889469]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="droite" unique_id=22100593]
+position = Vector2(194.5, 542.75)
+shape = SubResource("RectangleShape2D_wu6pm")
+debug_color = Color(0.8857429, 0.00030399382, 0.80839795, 0.41960785)
+
+[connection signal="body_entered" from="SceneExit" to="." method="_on_scene_exit_body_entered"]
+[connection signal="body_entered" from="droite" to="." method="_on_droite_body_entered"]
+
+[editable path="CharacterBody2D"]

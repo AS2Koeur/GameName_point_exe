@@ -1,0 +1,14 @@
+join Narrateur center
+Narrateur: Mais qu’est ce que t’as fait !?
+[clear time="1.0"]
+[wait time="1.0"]
+Narrateur: T’avais pas le droit de toucher à ça, et puis qui utilise les flèches directionnelles dans un Otome Game ???
+Narrateur:  En plus t’as raté toute la narration là …
+[clear time="1.0"]
+[wait time="2.0"]
+Narrateur: Tu devais croiser ton senpai dans le bus… Comment tu vas faire pour suivre la narration maintenant ? (Déjà qu’elle est pas dingue)
+[wait time="2.0"]
+[clear time="1.0"]
+Narrateur: Bon bah … va à droite pour continuer.
+[wait time="2.0"]
+[end_timeline]

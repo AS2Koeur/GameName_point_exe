@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 DialogManager="*uid://b3oa8x72sriw4"
 Dialogic="*uid://ds2q0uclmolvu"
 
+[debug]
+
+gdscript/warnings/unused_variable=0
+
 [dialogic]
 
 directories/dch_directory={
@@ -28,7 +32,14 @@ directories/dch_directory={
 "Narrateur": "res://dialogTimeline/Narrateur.dch"
 }
 directories/dtl_directory={
+"4eClicCasier": "res://dialogTimeline/4eClicCasier.dtl",
 "Scene2": "res://dialogTimeline/Scene2.dtl",
+"Scene3": "res://dialogTimeline/Scene3.dtl",
+"Scene3Bis": "res://dialogTimeline/Scene3Bis.dtl",
+"Scene4": "res://dialogTimeline/Scene4.dtl",
+"Scene4FeuilleRecup": "res://dialogTimeline/Scene4FeuilleRecup.dtl",
+"Scene4MiniDialogue": "res://dialogTimeline/Scene4MiniDialogue.dtl",
+"Scene4TryExit": "res://dialogTimeline/Scene4TryExit.dtl",
 "timeline": "res://dialogTimeline/timeline.dtl"
 }
 layout/style_directory={}
@@ -127,6 +138,11 @@ Quit={
 SkipChambre={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+restart={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":82,"key_label":0,"unicode":114,"location":0,"echo":false,"script":null)
 ]
 }
 

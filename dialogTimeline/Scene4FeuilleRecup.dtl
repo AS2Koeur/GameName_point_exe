@@ -1,0 +1,6 @@
+Narrateur: Bah voilà, t'as gagné.
+Narrateur: Félicitations.
+Narrateur: Debrouille toi tout.e seul.e pour t'en débarasser...
+[wait time="1.0"]
+join "Kawaine Girl" center
+"Kawaine Girl": HIHIHIHIHIHIHIHIHIHIHIHIHIHI
