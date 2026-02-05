@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d1bild2omu6rl" path="res://assets/sprites/Gay.png" id="6_igv3a"]
 [ext_resource type="Script" path="res://scenes/senpai.gd" id="6_myebn"]
 [ext_resource type="Texture2D" uid="uid://c3n5xuxtiok0s" path="res://assets/images/KawaiineGirlSprite1.png" id="7_lmvvv"]
+[ext_resource type="Texture2D" uid="uid://2uuaa45tibxq" path="res://assets/images/Flech.png" id="10_myebn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tdquh"]
 size = Vector2(166, 335)
@@ -78,6 +79,11 @@ visible = false
 position = Vector2(469, 695)
 texture = ExtResource("3_aerdd")
 
+[node name="CLIQUESURCASIER" type="Sprite2D" parent="CasierRose" unique_id=1257272517]
+position = Vector2(-215, 62)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("10_myebn")
+
 [node name="Area2D" type="Area2D" parent="CasierRose" unique_id=1252774181]
 position = Vector2(1, 0)
 collision_layer = 2
@@ -92,6 +98,35 @@ visible = false
 position = Vector2(317, 756)
 scale = Vector2(85.49999, 57.5)
 texture = SubResource("CanvasTexture_igv3a")
+
+[node name="CLIKFEUILLE" type="Sprite2D" parent="Feuille" unique_id=663339727]
+position = Vector2(-1.1111114, 0.13913059)
+scale = Vector2(0.0013099416, 0.0019478264)
+texture = ExtResource("10_myebn")
+
+[node name="CLIKFEUILLE" type="Sprite2D" parent="Feuille/CLIKFEUILLE" unique_id=355982437]
+position = Vector2(249.99983, -571.4286)
+rotation = 0.7941248
+scale = Vector2(0.63514304, 0.63514304)
+texture = ExtResource("10_myebn")
+
+[node name="CLIKFEUILLE" type="Sprite2D" parent="Feuille/CLIKFEUILLE/CLIKFEUILLE" unique_id=356429891]
+position = Vector2(626.9184, -568.1393)
+rotation = 0.7941248
+scale = Vector2(1.1682067, 1.1682067)
+texture = ExtResource("10_myebn")
+
+[node name="CLIKFEUILLE" type="Sprite2D" parent="Feuille/CLIKFEUILLE/CLIKFEUILLE/CLIKFEUILLE" unique_id=631362500]
+position = Vector2(15.833618, -829.69836)
+rotation = 0.7941248
+scale = Vector2(1.1682067, 1.1682067)
+texture = ExtResource("10_myebn")
+
+[node name="CLIKFEUILLE" type="Sprite2D" parent="Feuille/CLIKFEUILLE/CLIKFEUILLE/CLIKFEUILLE/CLIKFEUILLE" unique_id=1117100660]
+position = Vector2(326.3944, -613.30664)
+rotation = 0.7941248
+scale = Vector2(1.0554582, 1.0554582)
+texture = ExtResource("10_myebn")
 
 [node name="FeuilleArea" type="Area2D" parent="Feuille" unique_id=1371762949]
 collision_layer = 8
