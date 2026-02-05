@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_sortie_body_entered(body: CharacterBody2D) -> void:
-	get_tree().change_scene_to_file("res://scenes/Scene4Hall.tscn")
+	get_tree().change_scene_to_file("res://scenes/cinematique_hall.tscn")
 	Dialogic.end_timeline(true)
 
 
