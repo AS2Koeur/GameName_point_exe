@@ -1,12 +1,13 @@
-[gd_scene format=3 uid="uid://cdv7atfv4jfj6"]
+[gd_scene format=3 uid="uid://blw4abbx80ywa"]
 
 [ext_resource type="Script" uid="uid://c41l1xo5mma3w" path="res://scripts/scene_4_hall_Manager.gd" id="1_em3vf"]
 [ext_resource type="Texture2D" uid="uid://oagfyoltbdek" path="res://assets/images/Hall.png" id="1_jpgks"]
 [ext_resource type="Texture2D" uid="uid://cebwy5jta10fk" path="res://assets/images/CasiersBleusHall.png" id="2_3dnbn"]
 [ext_resource type="Texture2D" uid="uid://b5oql8bgow63e" path="res://assets/images/CasierRoseHall.png" id="3_aerdd"]
-[ext_resource type="PackedScene" uid="uid://dnnxp4rqpnms5" path="res://scenes/Joueur.tscn" id="4_24osr"]
-[ext_resource type="Texture2D" uid="uid://elpt4ds2v31q" path="res://icon.svg" id="5_lmvvv"]
-[ext_resource type="Script" uid="uid://cscf7uirsc72i" path="res://scenes/senpai.gd" id="6_myebn"]
+[ext_resource type="PackedScene" uid="uid://xt7tubkbf10h" path="res://scenes/Joueur.tscn" id="4_24osr"]
+[ext_resource type="Texture2D" uid="uid://b13gh0dc1kdya" path="res://assets/images/Simp.png" id="5_lmvvv"]
+[ext_resource type="Texture2D" uid="uid://d1bild2omu6rl" path="res://assets/sprites/Gay.png" id="6_igv3a"]
+[ext_resource type="Script" path="res://scenes/senpai.gd" id="6_myebn"]
 [ext_resource type="Texture2D" uid="uid://c3n5xuxtiok0s" path="res://assets/images/KawaiineGirlSprite1.png" id="7_lmvvv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tdquh"]
@@ -79,6 +80,8 @@ texture = ExtResource("3_aerdd")
 
 [node name="Area2D" type="Area2D" parent="CasierRose" unique_id=1252774181]
 position = Vector2(1, 0)
+collision_layer = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CasierRose/Area2D" unique_id=1119436161]
 position = Vector2(-3, 10)
@@ -91,6 +94,8 @@ scale = Vector2(85.49999, 57.5)
 texture = SubResource("CanvasTexture_igv3a")
 
 [node name="FeuilleArea" type="Area2D" parent="Feuille" unique_id=1371762949]
+collision_layer = 8
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Feuille/FeuilleArea" unique_id=751375012]
 scale = Vector2(1, 1.0000004)
@@ -99,9 +104,9 @@ disabled = true
 
 [node name="Feuille2" type="Sprite2D" parent="." unique_id=325735958]
 visible = false
-position = Vector2(609, 927.99994)
-scale = Vector2(-38.05928, 37.2568)
-texture = SubResource("CanvasTexture_igv3a")
+position = Vector2(609, 938)
+scale = Vector2(-0.15897511, 0.15562305)
+texture = ExtResource("5_lmvvv")
 
 [node name="Feuille3" type="Sprite2D" parent="." unique_id=720096114]
 visible = false
@@ -113,8 +118,9 @@ texture = SubResource("CanvasTexture_igv3a")
 position = Vector2(221, 508)
 
 [node name="Senpai" type="Sprite2D" parent="." unique_id=1289541376]
-position = Vector2(1743, 245)
-texture = ExtResource("5_lmvvv")
+position = Vector2(1744.9998, 159.00006)
+scale = Vector2(0.30700028, 0.30700028)
+texture = ExtResource("6_igv3a")
 script = ExtResource("6_myebn")
 
 [node name="KawaineGirl" type="Sprite2D" parent="." unique_id=822805488]
@@ -124,6 +130,8 @@ scale = Vector2(0.28279594, 0.281063)
 texture = ExtResource("7_lmvvv")
 
 [node name="CollisionMurs" type="StaticBody2D" parent="." unique_id=2112483891]
+collision_layer = 2
+collision_mask = 4
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionMurs" unique_id=1922204877]
@@ -184,6 +192,8 @@ position = Vector2(1528, 1074)
 shape = SubResource("RectangleShape2D_0ijr1")
 
 [node name="CollisionCasiers" type="StaticBody2D" parent="." unique_id=2010604178]
+collision_layer = 2
+collision_mask = 4
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionCasiers" unique_id=814973832]
@@ -197,6 +207,8 @@ shape = SubResource("RectangleShape2D_lmvvv")
 [node name="sorties" type="Node2D" parent="." unique_id=1644006845]
 
 [node name="SortieInterdite" type="Area2D" parent="sorties" unique_id=1041076007]
+collision_layer = 8
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorties/SortieInterdite" unique_id=1263145746]
 position = Vector2(41, 583.5)
@@ -204,6 +216,8 @@ shape = SubResource("RectangleShape2D_dl5rs")
 debug_color = Color(1, 0, 0.101960786, 0.41960785)
 
 [node name="SortieDroite" type="Area2D" parent="sorties" unique_id=1823592924]
+collision_layer = 8
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorties/SortieDroite" unique_id=1045077917]
 position = Vector2(1908, 589)
@@ -211,6 +225,8 @@ shape = SubResource("RectangleShape2D_dl5rs")
 debug_color = Color(1, 0, 0.101960786, 0.41960785)
 
 [node name="SortieHautSalleInfo" type="Area2D" parent="sorties" unique_id=1220174756]
+collision_layer = 8
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorties/SortieHautSalleInfo" unique_id=940554089]
 position = Vector2(988, 93)
@@ -218,6 +234,8 @@ shape = SubResource("RectangleShape2D_8f2r1")
 debug_color = Color(0.44233283, 0.45376074, 1, 0.41960785)
 
 [node name="SortieBasDroiteClasse" type="Area2D" parent="sorties" unique_id=545621091]
+collision_layer = 8
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorties/SortieBasDroiteClasse" unique_id=116672943]
 position = Vector2(1524.25, 1030)
@@ -225,6 +243,8 @@ shape = SubResource("RectangleShape2D_objlb")
 debug_color = Color(0.88046443, 0.33875912, 5.7756904e-07, 0.41960785)
 
 [node name="SortieBasGauche" type="Area2D" parent="sorties" unique_id=732738312]
+collision_layer = 8
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorties/SortieBasGauche" unique_id=1089531311]
 position = Vector2(446, 1033)

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dscj6g3ecohg"]
 
-[ext_resource type="Script" uid="uid://c6ojil0hx5um0" path="res://scripts/classe.gd" id="1_4qvt1"]
+[ext_resource type="Script" path="res://scripts/classe.gd" id="1_4qvt1"]
 [ext_resource type="Texture2D" uid="uid://bixlm5xvjqpbn" path="res://assets/images/SALLE2CLASSE.png" id="1_lnnbf"]
-[ext_resource type="PackedScene" uid="uid://dnnxp4rqpnms5" path="res://scenes/Joueur.tscn" id="3_vjlyi"]
+[ext_resource type="PackedScene" uid="uid://xt7tubkbf10h" path="res://scenes/Joueur.tscn" id="3_vjlyi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qvt1"]
 size = Vector2(206, 474.5)
@@ -80,6 +80,8 @@ position = Vector2(984, 796)
 
 [node name="Couloir" type="Area2D" parent="." unique_id=319910289]
 position = Vector2(1571, 696)
+collision_layer = 8
+collision_mask = 4
 
 [node name="SalleSuivante" type="CollisionShape2D" parent="Couloir" unique_id=2085706707]
 position = Vector2(-596, 366.5)

@@ -1,1 +1,9 @@
 res://scenes/Joueur.tscn
+res://scenes/couloir.tscn
+res://dialogTimeline/Narrateur.dch
+res://scenes/Scene4Hall.tscn
+res://scenes/SalleInfo.tscn
+res://scenes/toilett_es.tscn
+res://scripts/scene_4_hall_Manager.gd
+res://scenes/classe.tscn
+res://scenes/Feur.tscn

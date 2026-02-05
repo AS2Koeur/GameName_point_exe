@@ -1,11 +1,13 @@
-[gd_scene format=4 uid="uid://dnnxp4rqpnms5"]
+[gd_scene format=4 uid="uid://xt7tubkbf10h"]
 
 [ext_resource type="Texture2D" uid="uid://de6yoigpfa0fb" path="res://assets/sprites/otomepg1.png" id="1_8cenu"]
-[ext_resource type="Script" uid="uid://bwdu7to7cjh2c" path="res://scenes/joueur.gd" id="1_xqeeq"]
+[ext_resource type="Script" path="res://scenes/joueur.gd" id="1_xqeeq"]
+[ext_resource type="Texture2D" uid="uid://dmg8m7u8r1wjy" path="res://assets/sprites/otomedd1.png" id="2_5imfv"]
 [ext_resource type="Texture2D" uid="uid://d2nmswh3r88gf" path="res://assets/sprites/otomepg2.png" id="2_xqeeq"]
 [ext_resource type="Texture2D" uid="uid://debw3b6grkc1t" path="res://assets/sprites/otomepg3.png" id="3_gq6rk"]
 [ext_resource type="Texture2D" uid="uid://5fowalg3jxlv" path="res://assets/sprites/otomepd1.png" id="4_5imfv"]
 [ext_resource type="Texture2D" uid="uid://dwl2ewfh6ofap" path="res://assets/sprites/otomepd2.png" id="5_cgn8g"]
+[ext_resource type="Texture2D" uid="uid://5seah1rfq2uj" path="res://assets/sprites/otomef1.png" id="6_cgn8g"]
 [ext_resource type="Texture2D" uid="uid://cmfbbgd2j8b6w" path="res://assets/sprites/otomepd3.png" id="6_xicwc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6n23"]
@@ -13,6 +15,14 @@ size = Vector2(166, 175)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l3hxd"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5imfv")
+}],
+"loop": true,
+"name": &"Back",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_8cenu")
@@ -25,6 +35,14 @@ animations = [{
 }],
 "loop": false,
 "name": &"Droite",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_cgn8g")
+}],
+"loop": true,
+"name": &"Front",
 "speed": 5.0
 }, {
 "frames": [{
@@ -68,6 +86,8 @@ data = PackedByteArray("//uUBAAIgm0mwAsGQhBMxNgBYSVeCw0FH0wgacF3IKMphY34BBBQVKTP
 
 [node name="Me" type="CharacterBody2D" unique_id=2054218985]
 scale = Vector2(0.3, 0.3)
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_xqeeq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139292562]
@@ -78,7 +98,7 @@ shape = SubResource("RectangleShape2D_b6n23")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=865956271]
 sprite_frames = SubResource("SpriteFrames_l3hxd")
-animation = &"idleGauche"
+animation = &"Back"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1062039795]
 position = Vector2(-1600, -1800)

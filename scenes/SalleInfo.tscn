@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dvgt5vd54uthc"]
 
 [ext_resource type="Texture2D" uid="uid://u0rbf00git52" path="res://assets/images/Odinateur.png" id="1_lq8ju"]
-[ext_resource type="Script" uid="uid://dll7c668hlctv" path="res://scripts/salle_info.gd" id="1_nvsg4"]
+[ext_resource type="Script" path="res://scripts/salle_info.gd" id="1_nvsg4"]
 [ext_resource type="Texture2D" uid="uid://b6uj0tr26lliw" path="res://assets/images/Ordinateurs.png" id="2_nvsg4"]
-[ext_resource type="PackedScene" uid="uid://dnnxp4rqpnms5" path="res://scenes/Joueur.tscn" id="4_s81mj"]
+[ext_resource type="PackedScene" uid="uid://xt7tubkbf10h" path="res://scenes/Joueur.tscn" id="4_s81mj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s81mj"]
 size = Vector2(1977.5, 63)
@@ -72,6 +72,8 @@ texture = ExtResource("2_nvsg4")
 
 [node name="Me" parent="." unique_id=2054218985 instance=ExtResource("4_s81mj")]
 position = Vector2(470, 319)
+collision_layer = 4
+collision_mask = 2
 
 [node name="Interaction" type="Node2D" parent="." unique_id=1401641324]
 
