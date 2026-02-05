@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://u0rbf00git52" path="res://assets/images/Odinateur.png" id="1_lq8ju"]
 [ext_resource type="Script" uid="uid://dll7c668hlctv" path="res://scripts/salle_info.gd" id="1_nvsg4"]
 [ext_resource type="Texture2D" uid="uid://b6uj0tr26lliw" path="res://assets/images/Ordinateurs.png" id="2_nvsg4"]
-[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="4_s81mj"]
+[ext_resource type="PackedScene" uid="uid://xt7tubkbf10h" path="res://scenes/Joueur.tscn" id="4_s81mj"]
 [ext_resource type="Texture2D" uid="uid://c3n5xuxtiok0s" path="res://assets/images/KawaiineGirlSprite1.png" id="5_mg6jo"]
+[ext_resource type="AudioStream" uid="uid://dx7e7ijdhsvrb" path="res://assets/audio/hitslab-romantics-love-valentines-day-477796.mp3" id="6_65ru4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s81mj"]
 size = Vector2(1977.5, 63)
@@ -127,6 +128,10 @@ visible = false
 position = Vector2(979, 503)
 scale = Vector2(3, 3)
 texture = ExtResource("5_mg6jo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1623386209]
+stream = ExtResource("6_65ru4")
+autoplay = true
 
 [connection signal="body_entered" from="Interaction/Sortie" to="." method="_on_sortie_body_entered"]
 [connection signal="body_entered" from="Interaction/1ePC" to="." method="_on_first_pc_body_entered"]

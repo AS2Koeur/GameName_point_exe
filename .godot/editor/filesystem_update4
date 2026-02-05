@@ -208,3 +208,6 @@ res://scripts/salle_info.gd
 res://scripts/toilett_es.gd
 res://scripts/wolaonarrivealecole.gd
 res://scenes/MainMenu.tscn
+res://scenes/Scene2Chambre.tscn
+res://scenes/cinematique_hall.tscn
+res://scenes/wolaonarrivealecole.tscn

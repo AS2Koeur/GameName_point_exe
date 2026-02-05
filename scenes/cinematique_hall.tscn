@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://bn8ia2pv6ifcj"]
+[gd_scene format=3 uid="uid://cfjgfm5qwwq0y"]
 
 [ext_resource type="Texture2D" uid="uid://oagfyoltbdek" path="res://assets/images/Hall.png" id="1_hgelu"]
-[ext_resource type="Script" uid="uid://bxunbfxf4pyp7" path="res://scenes/cinematique_hall_Manager.gd" id="1_sgfrc"]
+[ext_resource type="Script" path="res://scenes/cinematique_hall_Manager.gd" id="1_sgfrc"]
 [ext_resource type="Texture2D" uid="uid://cebwy5jta10fk" path="res://assets/images/CasiersBleusHall.png" id="2_sgfrc"]
 [ext_resource type="Texture2D" uid="uid://b5pf7u38iu862" path="res://assets/images/casiersHaut.png" id="3_fmb4r"]
 [ext_resource type="Texture2D" uid="uid://b5oql8bgow63e" path="res://assets/images/CasierRoseHall.png" id="3_ng33u"]
@@ -9,11 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://dolasp3j6j05n" path="res://assets/images/MECHANTMECHANT.png" id="5_6k1qb"]
 [ext_resource type="Texture2D" uid="uid://b13gh0dc1kdya" path="res://assets/images/Simp.png" id="6_t7kir"]
 [ext_resource type="Texture2D" uid="uid://bxkjr1rqwp628" path="res://assets/images/pendu.png" id="7_ic666"]
-[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="8_hojnx"]
+[ext_resource type="PackedScene" uid="uid://xt7tubkbf10h" path="res://scenes/Joueur.tscn" id="8_hojnx"]
 [ext_resource type="Texture2D" uid="uid://d1bild2omu6rl" path="res://assets/sprites/Gay.png" id="9_itg0e"]
 [ext_resource type="Script" uid="uid://cscf7uirsc72i" path="res://scenes/senpai.gd" id="10_8pjt3"]
 [ext_resource type="Texture2D" uid="uid://br5efexn7oseu" path="res://assets/images/KAWAINEgirl.png" id="12_sgfrc"]
 [ext_resource type="Texture2D" uid="uid://rgjat6w1nwvx" path="res://assets/images/SceneConfession.png" id="13_ng33u"]
+[ext_resource type="AudioStream" uid="uid://c4scrlwklvytj" path="res://assets/audio/Feelings.mp3" id="15_6k1qb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgios"]
 size = Vector2(166, 335)
@@ -305,6 +306,9 @@ position = Vector2(1544, 279)
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boom" unique_id=165170482]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2005620061]
+stream = ExtResource("15_6k1qb")
 
 [connection signal="Senpaaaaai" from="." to="." method="_on_senpaaaaai"]
 [connection signal="Senpaaaaai" from="." to="Senpai" method="_on_cinematique_hall_senpaaaaai"]

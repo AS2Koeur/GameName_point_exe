@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://c0i145147vvap" path="res://assets/images/CERISIER.png" id="1_1n81i"]
 [ext_resource type="Script" uid="uid://crjdcjtpity1k" path="res://scripts/wolaonarrivealecole.gd" id="1_6ikhq"]
 [ext_resource type="Texture2D" uid="uid://leu2i44htyqs" path="res://assets/images/CERISIERS.png" id="2_cqkrf"]
-[ext_resource type="PackedScene" uid="uid://dnnxp4rqpnms5" path="res://scenes/Joueur.tscn" id="3_rghmn"]
+[ext_resource type="PackedScene" uid="uid://xt7tubkbf10h" path="res://scenes/Joueur.tscn" id="3_rghmn"]
+[ext_resource type="AudioStream" uid="uid://dx7e7ijdhsvrb" path="res://assets/audio/hitslab-romantics-love-valentines-day-477796.mp3" id="5_6ikhq"]
+[ext_resource type="PackedScene" uid="uid://bxigbarfyksdb" path="res://scenes/Feur.tscn" id="6_ntbg6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rghmn"]
 size = Vector2(1724, 258)
@@ -43,6 +45,8 @@ SPEED = 2000.0
 
 [node name="collisions" type="StaticBody2D" parent="." unique_id=41913684]
 position = Vector2(983, 119)
+collision_layer = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="collisions" unique_id=1108684185]
 shape = SubResource("RectangleShape2D_rghmn")
@@ -69,8 +73,8 @@ shape = SubResource("CircleShape2D_1n81i")
 
 [node name="SceneExit" type="Area2D" parent="." unique_id=759340593]
 position = Vector2(985, 536)
-collision_layer = 9
-collision_mask = 5
+collision_layer = 8
+collision_mask = 4
 
 [node name="SalleSuivante" type="CollisionShape2D" parent="SceneExit" unique_id=703182742]
 light_mask = 8
@@ -80,11 +84,20 @@ shape = SubResource("RectangleShape2D_cqkrf")
 debug_color = Color(0.99996454, 0, 0.11088101, 0.41960785)
 
 [node name="droite" type="Area2D" parent="." unique_id=114889469]
+collision_layer = 8
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="droite" unique_id=22100593]
 position = Vector2(194.5, 542.75)
 shape = SubResource("RectangleShape2D_wu6pm")
 debug_color = Color(0.8857429, 0.00030399382, 0.80839795, 0.41960785)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1416790093]
+position = Vector2(194.5, 542.75)
+stream = ExtResource("5_6ikhq")
+
+[node name="feur" parent="." unique_id=806538779 instance=ExtResource("6_ntbg6")]
+position = Vector2(997, 532)
 
 [connection signal="body_entered" from="SceneExit" to="." method="_on_scene_exit_body_entered"]
 [connection signal="body_entered" from="droite" to="." method="_on_droite_body_entered"]

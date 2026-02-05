@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://cdv7atfv4jfj6"]
+[gd_scene format=3 uid="uid://blw4abbx80ywa"]
 
 [ext_resource type="Script" uid="uid://c41l1xo5mma3w" path="res://scripts/scene_4_hall_Manager.gd" id="1_em3vf"]
 [ext_resource type="Texture2D" uid="uid://oagfyoltbdek" path="res://assets/images/Hall.png" id="1_jpgks"]
 [ext_resource type="Texture2D" uid="uid://cebwy5jta10fk" path="res://assets/images/CasiersBleusHall.png" id="2_3dnbn"]
 [ext_resource type="Texture2D" uid="uid://b5pf7u38iu862" path="res://assets/images/casiersHaut.png" id="3_8f2r1"]
 [ext_resource type="Texture2D" uid="uid://b5oql8bgow63e" path="res://assets/images/CasierRoseHall.png" id="3_aerdd"]
-[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="4_24osr"]
+[ext_resource type="PackedScene" uid="uid://xt7tubkbf10h" path="res://scenes/Joueur.tscn" id="4_24osr"]
 [ext_resource type="Texture2D" uid="uid://b13gh0dc1kdya" path="res://assets/images/Simp.png" id="5_lmvvv"]
 [ext_resource type="Texture2D" uid="uid://dolasp3j6j05n" path="res://assets/images/MECHANTMECHANT.png" id="6_0ijr1"]
 [ext_resource type="Texture2D" uid="uid://d1bild2omu6rl" path="res://assets/sprites/Gay.png" id="6_igv3a"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c3n5xuxtiok0s" path="res://assets/images/KawaiineGirlSprite1.png" id="7_lmvvv"]
 [ext_resource type="Texture2D" uid="uid://bxkjr1rqwp628" path="res://assets/images/pendu.png" id="8_8f2r1"]
 [ext_resource type="Texture2D" uid="uid://2uuaa45tibxq" path="res://assets/images/Flech.png" id="10_myebn"]
+[ext_resource type="AudioStream" uid="uid://dx7e7ijdhsvrb" path="res://assets/audio/hitslab-romantics-love-valentines-day-477796.mp3" id="14_objlb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tdquh"]
 size = Vector2(166, 335)
@@ -285,6 +286,9 @@ collision_mask = 4
 position = Vector2(446, 1033)
 shape = SubResource("RectangleShape2D_objlb")
 debug_color = Color(0.88046443, 0.33875912, 5.7756904e-07, 0.41960785)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1422773493]
+stream = ExtResource("14_objlb")
 
 [connection signal="input_event" from="CasierRose/Area2D" to="." method="_on_area_Casier_input_event"]
 [connection signal="body_entered" from="Feuille/FeuilleArea" to="." method="_on_feuille_area_body_entered"]

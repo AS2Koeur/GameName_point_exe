@@ -33,7 +33,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="feur" type="AnimatedSprite2D" unique_id=806538779]
+[node name="Feur" type="AnimatedSprite2D" unique_id=806538779]
 sprite_frames = SubResource("SpriteFrames_i7e1t")
 animation = &"PLAYYY"
 frame_progress = 0.7185842

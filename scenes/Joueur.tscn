@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dbg5ooxgvnwya"]
+[gd_scene format=4 uid="uid://xt7tubkbf10h"]
 
 [ext_resource type="Texture2D" uid="uid://de6yoigpfa0fb" path="res://assets/sprites/otomepg1.png" id="1_8cenu"]
 [ext_resource type="Script" uid="uid://bwdu7to7cjh2c" path="res://scenes/joueur.gd" id="1_xqeeq"]
