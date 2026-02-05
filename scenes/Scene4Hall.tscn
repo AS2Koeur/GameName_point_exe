@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c41l1xo5mma3w" path="res://scripts/scene_4_hall_Manager.gd" id="1_em3vf"]
 [ext_resource type="Texture2D" uid="uid://oagfyoltbdek" path="res://assets/images/Hall.png" id="1_jpgks"]
 [ext_resource type="Texture2D" uid="uid://cebwy5jta10fk" path="res://assets/images/CasiersBleusHall.png" id="2_3dnbn"]
+[ext_resource type="Texture2D" uid="uid://b5pf7u38iu862" path="res://assets/images/casiersHaut.png" id="3_8f2r1"]
 [ext_resource type="Texture2D" uid="uid://b5oql8bgow63e" path="res://assets/images/CasierRoseHall.png" id="3_aerdd"]
 [ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="4_24osr"]
 [ext_resource type="Texture2D" uid="uid://b13gh0dc1kdya" path="res://assets/images/Simp.png" id="5_lmvvv"]
@@ -63,11 +64,9 @@ position = Vector2(985, 536)
 texture = ExtResource("1_jpgks")
 metadata/_edit_lock_ = true
 
-[node name="CasiersBleus" type="Sprite2D" parent="." unique_id=982555074]
-position = Vector2(986, 255)
-scale = Vector2(1, 0.7925926)
-texture = ExtResource("2_3dnbn")
-metadata/_edit_lock_ = true
+[node name="CasiersBleus" type="Sprite2D" parent="." unique_id=409421521]
+position = Vector2(989, 375)
+texture = ExtResource("3_8f2r1")
 
 [node name="CasiersBleusBas" type="Sprite2D" parent="." unique_id=1366559822]
 position = Vector2(989, 540)

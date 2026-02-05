@@ -1,0 +1,15 @@
+join "Kawaine Girl" center
+join Narrateur center
+label Confession
+"Kawaine Girl": Je…
+"Kawaine Girl": Je…..............................................
+"Kawaine Girl": JE T’AIME SENPAI  !!!!!!!!!!!!!!
+"Kawaine Girl": !!!!!!!
+"Kawaine Girl": !!!!!!!!!!!!!!!!!!!!!!!
+Senpai: Euh… je-
+Narrateur: ??????????????????????????????????????!!!!!!!!!!!!!!!!!!!!!!!!!
+Narrateur: ATTENDS ATTENDS, COMMENT ÇA SE FAIT???
+Narrateur: Pourtant j’avais tout vérifié...
+Narrateur: COMMENT CA SE FAIT QUE T’ARRIVES DÉJA A LA FIN ?!
+Narrateur: J’AVAIS PAS DU TOUT FAIT CA
+[signal arg="ConfessionFinieee"]

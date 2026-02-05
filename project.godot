@@ -29,10 +29,12 @@ gdscript/warnings/unused_variable=0
 directories/dch_directory={
 "Kawaine Girl": "res://dialogTimeline/Kawaine Girl.dch",
 "Me": "res://dialogTimeline/Me.dch",
-"Narrateur": "res://dialogTimeline/Narrateur.dch"
+"Narrateur": "res://dialogTimeline/Narrateur.dch",
+"Senpai": "res://dialogTimeline/Senpai.dch"
 }
 directories/dtl_directory={
 "4eClicCasier": "res://dialogTimeline/4eClicCasier.dtl",
+"Cinematique": "res://dialogTimeline/Cinematique.dtl",
 "Scene2": "res://dialogTimeline/Scene2.dtl",
 "Scene3": "res://dialogTimeline/Scene3.dtl",
 "Scene3Bis": "res://dialogTimeline/Scene3Bis.dtl",
@@ -41,6 +43,7 @@ directories/dtl_directory={
 "Scene4MiniDialogue": "res://dialogTimeline/Scene4MiniDialogue.dtl",
 "Scene4TryExit": "res://dialogTimeline/Scene4TryExit.dtl",
 "Scene5": "res://dialogTimeline/Scene5.dtl",
+"SceneFinale": "res://dialogTimeline/SceneFinale.dtl",
 "timeline": "res://dialogTimeline/timeline.dtl"
 }
 layout/style_directory={}

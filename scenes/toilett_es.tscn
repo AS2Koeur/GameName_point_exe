@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://coaatsfpad2c8"]
+[gd_scene format=3 uid="uid://d1nlhg3mmgei7"]
 
-[ext_resource type="Script" path="res://scripts/toilett_es.gd" id="1_2y7ex"]
+[ext_resource type="Script" uid="uid://cqv7efn22qyx" path="res://scripts/toilett_es.gd" id="1_2y7ex"]
 [ext_resource type="Texture2D" uid="uid://dvr8g6t3ykstv" path="res://assets/images/Toilettes.png" id="1_pifo0"]
-[ext_resource type="PackedScene" uid="uid://xt7tubkbf10h" path="res://scenes/Joueur.tscn" id="2_a8igk"]
+[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="2_a8igk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7icvy"]
-size = Vector2(1983, 549)
+size = Vector2(1983, 255)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a8igk"]
 size = Vector2(124, 525)
@@ -27,9 +27,8 @@ position = Vector2(988, 541)
 texture = ExtResource("1_pifo0")
 
 [node name="Me" parent="." unique_id=2054218985 instance=ExtResource("2_a8igk")]
-position = Vector2(1524, 218)
-collision_layer = 4
-collision_mask = 2
+position = Vector2(1717, 657)
+script = null
 
 [node name="Collision" type="StaticBody2D" parent="." unique_id=942792440]
 position = Vector2(988, 541)
@@ -37,7 +36,7 @@ collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision" unique_id=1657039214]
-position = Vector2(0.5, 264.5)
+position = Vector2(0.5, 411.5)
 shape = SubResource("RectangleShape2D_7icvy")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Collision" unique_id=1014653097]
@@ -64,3 +63,5 @@ shape = SubResource("RectangleShape2D_4yjam")
 debug_color = Color(0.98523265, 0, 0.34040052, 0.41960785)
 
 [connection signal="body_entered" from="COULOIR" to="." method="_on_couloir_body_entered"]
+
+[editable path="Me"]

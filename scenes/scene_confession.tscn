@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://braiop0aev64q"]
+
+[ext_resource type="Texture2D" uid="uid://rgjat6w1nwvx" path="res://assets/images/SceneConfession.png" id="1_di1it"]
+[ext_resource type="Script" uid="uid://cl1gah2ky178o" path="res://scenes/scene_confession.gd" id="1_ueyks"]
+
+[node name="SceneConfession" type="Node2D" unique_id=1017331044]
+script = ExtResource("1_ueyks")
+
+[node name="SceneConfession" type="Sprite2D" parent="." unique_id=862904190]
+position = Vector2(993, 534.00006)
+scale = Vector2(1.050926, 1.050926)
+texture = ExtResource("1_di1it")
