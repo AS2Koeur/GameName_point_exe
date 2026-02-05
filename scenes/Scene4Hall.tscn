@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://blw4abbx80ywa"]
+[gd_scene format=3 uid="uid://cdv7atfv4jfj6"]
 
 [ext_resource type="Script" uid="uid://c41l1xo5mma3w" path="res://scripts/scene_4_hall_Manager.gd" id="1_em3vf"]
 [ext_resource type="Texture2D" uid="uid://oagfyoltbdek" path="res://assets/images/Hall.png" id="1_jpgks"]
 [ext_resource type="Texture2D" uid="uid://cebwy5jta10fk" path="res://assets/images/CasiersBleusHall.png" id="2_3dnbn"]
 [ext_resource type="Texture2D" uid="uid://b5oql8bgow63e" path="res://assets/images/CasierRoseHall.png" id="3_aerdd"]
-[ext_resource type="PackedScene" uid="uid://xt7tubkbf10h" path="res://scenes/Joueur.tscn" id="4_24osr"]
+[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="4_24osr"]
 [ext_resource type="Texture2D" uid="uid://b13gh0dc1kdya" path="res://assets/images/Simp.png" id="5_lmvvv"]
 [ext_resource type="Texture2D" uid="uid://d1bild2omu6rl" path="res://assets/sprites/Gay.png" id="6_igv3a"]
-[ext_resource type="Script" path="res://scenes/senpai.gd" id="6_myebn"]
+[ext_resource type="Script" uid="uid://cscf7uirsc72i" path="res://scenes/senpai.gd" id="6_myebn"]
 [ext_resource type="Texture2D" uid="uid://c3n5xuxtiok0s" path="res://assets/images/KawaiineGirlSprite1.png" id="7_lmvvv"]
 [ext_resource type="Texture2D" uid="uid://2uuaa45tibxq" path="res://assets/images/Flech.png" id="10_myebn"]
 

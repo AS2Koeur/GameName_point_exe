@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dvgt5vd54uthc"]
 
 [ext_resource type="Texture2D" uid="uid://u0rbf00git52" path="res://assets/images/Odinateur.png" id="1_lq8ju"]
-[ext_resource type="Script" path="res://scripts/salle_info.gd" id="1_nvsg4"]
+[ext_resource type="Script" uid="uid://dll7c668hlctv" path="res://scripts/salle_info.gd" id="1_nvsg4"]
 [ext_resource type="Texture2D" uid="uid://b6uj0tr26lliw" path="res://assets/images/Ordinateurs.png" id="2_nvsg4"]
-[ext_resource type="PackedScene" uid="uid://xt7tubkbf10h" path="res://scenes/Joueur.tscn" id="4_s81mj"]
+[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="4_s81mj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s81mj"]
 size = Vector2(1977.5, 63)
@@ -72,8 +72,6 @@ texture = ExtResource("2_nvsg4")
 
 [node name="Me" parent="." unique_id=2054218985 instance=ExtResource("4_s81mj")]
 position = Vector2(470, 319)
-collision_layer = 4
-collision_mask = 2
 
 [node name="Interaction" type="Node2D" parent="." unique_id=1401641324]
 
@@ -84,25 +82,31 @@ position = Vector2(453, 80)
 shape = SubResource("RectangleShape2D_lq8ju")
 debug_color = Color(0.9919885, 0, 0.26442012, 0.41960785)
 
-[node name="Ordinateurs" type="Area2D" parent="Interaction" unique_id=996434328]
+[node name="1ePC" type="Area2D" parent="Interaction" unique_id=996434328]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Interaction/Ordinateurs" unique_id=1198242667]
-position = Vector2(283, 684.9375)
-shape = SubResource("RectangleShape2D_nvsg4")
-debug_color = Color(0.98928875, 0, 0.29760626, 0.41960785)
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Interaction/Ordinateurs" unique_id=1756278743]
-position = Vector2(551, 686.875)
-shape = SubResource("RectangleShape2D_nvsg4")
-debug_color = Color(0.98928875, 0, 0.29760626, 0.41960785)
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Interaction/Ordinateurs" unique_id=647566963]
+[node name="1ePC" type="CollisionShape2D" parent="Interaction/1ePC" unique_id=647566963]
 position = Vector2(1179, 250)
 shape = SubResource("RectangleShape2D_nvsg4")
 debug_color = Color(0.98928875, 0, 0.29760626, 0.41960785)
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Interaction/Ordinateurs" unique_id=845572992]
+[node name="2e PC" type="Area2D" parent="Interaction" unique_id=1616440370]
+
+[node name="2ePC" type="CollisionShape2D" parent="Interaction/2e PC" unique_id=845572992]
 position = Vector2(1706, 260)
+shape = SubResource("RectangleShape2D_nvsg4")
+debug_color = Color(0.98928875, 0, 0.29760626, 0.41960785)
+
+[node name="3ePC" type="Area2D" parent="Interaction" unique_id=706879986]
+
+[node name="3ePC" type="CollisionShape2D" parent="Interaction/3ePC" unique_id=1198242667]
+position = Vector2(283, 684.9375)
+shape = SubResource("RectangleShape2D_nvsg4")
+debug_color = Color(0.98928875, 0, 0.29760626, 0.41960785)
+
+[node name="4ePC" type="Area2D" parent="Interaction" unique_id=398051277]
+
+[node name="4ePC" type="CollisionShape2D" parent="Interaction/4ePC" unique_id=1756278743]
+position = Vector2(551, 686.875)
 shape = SubResource("RectangleShape2D_nvsg4")
 debug_color = Color(0.98928875, 0, 0.29760626, 0.41960785)
 
