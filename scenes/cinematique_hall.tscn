@@ -309,7 +309,6 @@ visible = false
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2005620061]
 stream = ExtResource("15_6k1qb")
-autoplay = true
 
 [connection signal="Senpaaaaai" from="." to="." method="_on_senpaaaaai"]
 [connection signal="Senpaaaaai" from="." to="Senpai" method="_on_cinematique_hall_senpaaaaai"]
