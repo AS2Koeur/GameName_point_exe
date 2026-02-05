@@ -64,6 +64,7 @@ func _on_area_Casier_input_event(viewport: Node, event: InputEvent, shape_idx: i
 		if clics == 1:
 			Dialogic.start("res://dialogTimeline/Scene4MiniDialogue.dtl")
 			$Feuille2.visible = true
+			$CasierRose/CLIQUESURCASIER.visible = false
 		if clics == 2:
 			$Feuille3.visible = true
 			Dialogic.start("res://dialogTimeline/4eClicCasier.dtl")
