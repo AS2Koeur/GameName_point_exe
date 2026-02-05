@@ -207,3 +207,4 @@ res://scripts/DialogueBasique.gd
 res://scripts/salle_info.gd
 res://scripts/toilett_es.gd
 res://scripts/wolaonarrivealecole.gd
+res://scenes/MainMenu.tscn
