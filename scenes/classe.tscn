@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c6ojil0hx5um0" path="res://scripts/classe.gd" id="1_4qvt1"]
 [ext_resource type="Texture2D" uid="uid://bixlm5xvjqpbn" path="res://assets/images/SALLE2CLASSE.png" id="1_lnnbf"]
-[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="3_vjlyi"]
-[ext_resource type="Script" uid="uid://bwdu7to7cjh2c" path="res://scenes/joueur.gd" id="4_kdyie"]
+[ext_resource type="PackedScene" uid="uid://dnnxp4rqpnms5" path="res://scenes/Joueur.tscn" id="3_vjlyi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qvt1"]
 size = Vector2(206, 474.5)
@@ -29,10 +28,6 @@ script = ExtResource("1_4qvt1")
 [node name="Fond" type="Sprite2D" parent="." unique_id=1737775017]
 position = Vector2(990, 540)
 texture = ExtResource("1_lnnbf")
-
-[node name="CharacterBody2D" parent="." unique_id=2054218985 instance=ExtResource("3_vjlyi")]
-position = Vector2(972, 662.00006)
-script = ExtResource("4_kdyie")
 
 [node name="Bureau" type="StaticBody2D" parent="." unique_id=320003027]
 position = Vector2(990, 540)
@@ -79,6 +74,9 @@ shape = SubResource("RectangleShape2D_kdyie")
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Fond2" unique_id=1808427651]
 position = Vector2(-580.25, -662)
 shape = SubResource("RectangleShape2D_c5bre")
+
+[node name="Me" parent="." unique_id=2054218985 instance=ExtResource("3_vjlyi")]
+position = Vector2(984, 796)
 
 [node name="Couloir" type="Area2D" parent="." unique_id=319910289]
 position = Vector2(1571, 696)

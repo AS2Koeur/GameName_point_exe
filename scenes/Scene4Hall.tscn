@@ -4,8 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://oagfyoltbdek" path="res://assets/images/Hall.png" id="1_jpgks"]
 [ext_resource type="Texture2D" uid="uid://cebwy5jta10fk" path="res://assets/images/CasiersBleusHall.png" id="2_3dnbn"]
 [ext_resource type="Texture2D" uid="uid://b5oql8bgow63e" path="res://assets/images/CasierRoseHall.png" id="3_aerdd"]
-[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="4_24osr"]
-[ext_resource type="Script" uid="uid://bwdu7to7cjh2c" path="res://scenes/joueur.gd" id="5_igv3a"]
+[ext_resource type="PackedScene" uid="uid://dnnxp4rqpnms5" path="res://scenes/Joueur.tscn" id="4_24osr"]
 [ext_resource type="Texture2D" uid="uid://elpt4ds2v31q" path="res://icon.svg" id="5_lmvvv"]
 [ext_resource type="Script" uid="uid://cscf7uirsc72i" path="res://scenes/senpai.gd" id="6_myebn"]
 [ext_resource type="Texture2D" uid="uid://c3n5xuxtiok0s" path="res://assets/images/KawaiineGirlSprite1.png" id="7_lmvvv"]
@@ -110,14 +109,13 @@ position = Vector2(374, 897)
 scale = Vector2(-62.65928, 37.2568)
 texture = SubResource("CanvasTexture_igv3a")
 
+[node name="Me" parent="." unique_id=2054218985 instance=ExtResource("4_24osr")]
+position = Vector2(221, 508)
+
 [node name="Senpai" type="Sprite2D" parent="." unique_id=1289541376]
 position = Vector2(1743, 245)
 texture = ExtResource("5_lmvvv")
 script = ExtResource("6_myebn")
-
-[node name="CharacterBody2D" parent="." unique_id=2054218985 instance=ExtResource("4_24osr")]
-position = Vector2(180, 569)
-script = ExtResource("5_igv3a")
 
 [node name="KawaineGirl" type="Sprite2D" parent="." unique_id=822805488]
 visible = false
@@ -240,5 +238,3 @@ debug_color = Color(0.88046443, 0.33875912, 5.7756904e-07, 0.41960785)
 [connection signal="body_entered" from="sorties/SortieHautSalleInfo" to="." method="_on_sortie_haut_salle_info_body_entered"]
 [connection signal="body_entered" from="sorties/SortieBasDroiteClasse" to="." method="_on_sortie_bas_droite_classe_body_entered"]
 [connection signal="body_entered" from="sorties/SortieBasGauche" to="." method="_on_sortie_bas_gauche_body_entered"]
-
-[editable path="CharacterBody2D"]

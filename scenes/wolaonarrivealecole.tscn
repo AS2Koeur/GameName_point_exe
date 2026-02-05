@@ -3,8 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c0i145147vvap" path="res://assets/images/CERISIER.png" id="1_1n81i"]
 [ext_resource type="Script" uid="uid://crjdcjtpity1k" path="res://scripts/wolaonarrivealecole.gd" id="1_6ikhq"]
 [ext_resource type="Texture2D" uid="uid://leu2i44htyqs" path="res://assets/images/CERISIERS.png" id="2_cqkrf"]
-[ext_resource type="PackedScene" uid="uid://dbg5ooxgvnwya" path="res://scenes/Joueur.tscn" id="3_rghmn"]
-[ext_resource type="Script" uid="uid://bwdu7to7cjh2c" path="res://scenes/joueur.gd" id="4_6ikhq"]
+[ext_resource type="PackedScene" uid="uid://dnnxp4rqpnms5" path="res://scenes/Joueur.tscn" id="3_rghmn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rghmn"]
 size = Vector2(1724, 258)
@@ -34,19 +33,13 @@ script = ExtResource("1_6ikhq")
 position = Vector2(985, 536)
 texture = ExtResource("1_1n81i")
 
-[node name="CharacterBody2D" parent="." unique_id=2054218985 instance=ExtResource("3_rghmn")]
-light_mask = 14
-visibility_layer = 12
-position = Vector2(480, 540)
-script = ExtResource("4_6ikhq")
-SPEED = 1000.0
-
-[node name="CollisionShape2D" parent="CharacterBody2D" index="0" unique_id=2139292562]
-light_mask = 26
-
 [node name="Arbres" type="Sprite2D" parent="." unique_id=222766284]
 position = Vector2(985, 536)
 texture = ExtResource("2_cqkrf")
+
+[node name="Me" parent="." unique_id=2054218985 instance=ExtResource("3_rghmn")]
+position = Vector2(505, 507)
+SPEED = 2000.0
 
 [node name="collisions" type="StaticBody2D" parent="." unique_id=41913684]
 position = Vector2(983, 119)
@@ -95,5 +88,3 @@ debug_color = Color(0.8857429, 0.00030399382, 0.80839795, 0.41960785)
 
 [connection signal="body_entered" from="SceneExit" to="." method="_on_scene_exit_body_entered"]
 [connection signal="body_entered" from="droite" to="." method="_on_droite_body_entered"]
-
-[editable path="CharacterBody2D"]
