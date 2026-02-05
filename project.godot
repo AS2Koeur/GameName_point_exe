@@ -40,6 +40,7 @@ directories/dtl_directory={
 "Scene4FeuilleRecup": "res://dialogTimeline/Scene4FeuilleRecup.dtl",
 "Scene4MiniDialogue": "res://dialogTimeline/Scene4MiniDialogue.dtl",
 "Scene4TryExit": "res://dialogTimeline/Scene4TryExit.dtl",
+"Scene5": "res://dialogTimeline/Scene5.dtl",
 "timeline": "res://dialogTimeline/timeline.dtl"
 }
 layout/style_directory={}
