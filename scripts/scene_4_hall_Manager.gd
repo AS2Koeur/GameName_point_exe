@@ -28,13 +28,11 @@ func _on_sortie_interdite_body_entered(body: CharacterBody2D) -> void:
 
 
 func _on_sortie_droite_body_entered(body: CharacterBody2D) -> void:
-	get_tree().change_scene_to_file("res://scenes/toilett_es.tscn")
-	Dialogic.end_timeline(true)
+	Dialogic.start("res://dialogTimeline/Scene4MiniDialogue.dtl", "Toilettes")
 
 
 func _on_sortie_haut_salle_info_body_entered(body: CharacterBody2D) -> void:
-	get_tree().change_scene_to_file("res://scenes/classe.tscn")
-	Dialogic.end_timeline(true)
+	Dialogic.start("res://dialogTimeline/Scene4MiniDialogue.dtl", "Classe")
 
 
 func _on_sortie_bas_droite_classe_body_entered(body: CharacterBody2D) -> void:
@@ -44,7 +42,7 @@ func _on_sortie_bas_droite_classe_body_entered(body: CharacterBody2D) -> void:
 
 
 func _on_sortie_bas_gauche_body_entered(body: CharacterBody2D) -> void:
-	pass # Replace with function body.
+	Dialogic.start("res://dialogTimeline/Scene4MiniDialogue.dtl", "BasGauche")
 
 
 

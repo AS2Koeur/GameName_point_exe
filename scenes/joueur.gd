@@ -20,6 +20,10 @@ func _physics_process(delta: float) -> void:
 		
 	if directionY:
 		velocity.y = directionY * SPEED
+		if velocity.y > 0:
+			$AnimatedSprite2D.play("Front")
+		else:
+			$AnimatedSprite2D.play("Back")
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	

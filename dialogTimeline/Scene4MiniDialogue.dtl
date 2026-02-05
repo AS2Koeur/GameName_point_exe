@@ -1,2 +1,15 @@
+join Narrateur center
 Narrateur: Mais lâche ce casier m'enfin !
 [end_timeline]
+label Classe
+Narrateur: Je t'assure qu'il n'y a rien à voir de ce côté...
+Narrateur: Cesse de procrastiner et retourne bosser en salle info un peu, que ce jeu serve un peu...
+[end_timeline]
+label Toilettes
+Narrateur: Tu veux aller aux toilettes? Pourquoi faire?
+Narrateur: C'est pas encore le moment de chialer, pour l'instant tu dois....
+Narrateur: BOSSER.
+[end_timeline]
+label BasGauche
+Narrateur: Je t'avoue que même moi je ne sais pas ce qu'il y a par là
+Narrateur: Une salle, peut-être...
